@@ -1,0 +1,68 @@
+#about-page {
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px;
+    background: #c34a39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container-fluid {
+        max-height: 650px;
+        height: 100%;
+        .row {
+            height: 100%;
+            padding: 20px!important;
+            background: #fff;
+            .first-col {
+                h3 {
+                    font-size: 2rem;
+                    margin-bottom: 1.25rem;
+                    letter-spacing: .02rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                p {
+                    margin-bottom: 1.25rem;
+                }
+            }
+            .second-col {
+                height: auto;
+                padding: 0;
+                .image-container {
+                    width: 100%;
+                    height: 100%;
+                    background-color: red;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+// Small Devices 
+@media screen and (max-width: 768px) {
+    #about-page {
+        .container-fluid {
+            .row {
+                .first-col {
+                    height: 50%;
+                }
+                .second-col {
+                    height: 50%;
+                    .image-container {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medium Devices and Over
+@media screen and (min-width: 768px) {
+    #properties-page {
+        padding: 80px;
+    }
+}

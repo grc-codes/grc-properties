@@ -1,0 +1,11 @@
+#contact-page {
+    margin-bottom: 2rem;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    #contact-page {
+        padding: 80px;
+    }
+}
