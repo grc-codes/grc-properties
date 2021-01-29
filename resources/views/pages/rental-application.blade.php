@@ -47,7 +47,7 @@
                             <input type='text' class='form-control' id='monthlySalary' name='monthlySalary'>
                         </div>
                     </div>
-                    <div class='row mb-3'>
+                    <div class='row mb-5'>
                         <label for='selectUnit' class='col-sm-4 col-form-label'>Preferred Unit</label>
                         <div class='col-sm-8'>
                             <select aria-label='Unit Selection' class='form-select' name='selectUnit' id='selectUnit'>
