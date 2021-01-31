@@ -1,11 +1,39 @@
 #contact-page {
-    margin-bottom: 2rem;
     min-height: 100vh;
-    padding: 25px;
+    background: #f5f5f5;
+    padding: 30px;
+    .container-fluid {
+        margin-bottom: 2rem;
+        h2 {
+            text-transform: uppercase;
+            border-bottom: 1px solid #CED1D4;
+            letter-spacing: .08rem;
+        }
+        .contact-description {
+        
+            h4 {
+                padding-top: 15px;
+                margin-bottom: 0;
+                font-size: 1.5rem;
+                color: $green-500;
+            }
+            p {
+                margin: 20px 0;
+                color: #333;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
-    #contact-page {
-        padding: 80px;
-    }
+    // #contact-page {
+    //     padding: 80px;
+    // }
 }

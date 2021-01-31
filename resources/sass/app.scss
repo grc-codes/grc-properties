@@ -1,3 +1,4 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
 @import 'reset';
 @import 'home';
 @import 'footer';
@@ -44,7 +45,7 @@ nav {
         min-height: 100vh;
         nav {
             min-height: 100%;
-            width: 25%;
+            width: 20%;
             .container-fluid {
                 display: flex;
                 flex-direction: column;
@@ -60,8 +61,12 @@ nav {
                 }
             }
         }
+        #hero {
+            width: 80%;
+            height: auto;
+        }
         #content-area {
-            width: 75%;
+            width: 80%;
             height: auto;
             overflow-y: scroll;
         }
