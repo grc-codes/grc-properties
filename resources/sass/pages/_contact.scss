@@ -1,7 +1,7 @@
 #contact-page {
-    min-height: 100vh;
-    background: #f5f5f5;
     padding: 30px;
+    background: #f5f5f5;
+
     .container-fluid {
         margin-bottom: 2rem;
         h2 {
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    // #contact-page {
-    //     padding: 80px;
-    // }
+    #contact-page {
+        padding: 60px;
+    }
 }

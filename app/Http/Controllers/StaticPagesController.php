@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class StaticPagesController extends Controller
 {
     public function home() {
-        return view('home');
+        return view('start');
     }
 
     public function about() {
@@ -27,7 +27,12 @@ class StaticPagesController extends Controller
     public function rentalApplication() {
         return view('pages/rental-application');
     }
+
     public function contact() {
         return view('pages/contact');
+    }
+
+    public function residentAccess() {
+        return view('auth/login');
     }
 }

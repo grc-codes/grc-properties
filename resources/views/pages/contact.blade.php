@@ -6,7 +6,7 @@
 @section('content')
 <div id='contact-page'>
     <div class='container-fluid mx-0 px-0'>
-        <div class='row mx-0'>
+        <div class='row px-0 mx-0'>
             <h2 class='py-2 mb-4'>Contact Information</h2>
             <div class='contact-description col-12 col-lg-5 mx-0 px-0 offset-lg-2'>
                 <h4>
@@ -60,25 +60,25 @@
                     <form action=''>
                         <div class='row mb-2'>
                             <label for='name' class='col-12 col-form-label'>Name</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <input type='text' class='form-control' id='name' name='name'>
                             </div>
                         </div>
                         <div class='row mb-2'>
                             <label for='email' class='col-12 col-form-label'>Email</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <input type='email' class='form-control' id='email' name='email'>
                             </div>
                         </div>
                         <div class='row mb-2'>
                             <label for='phoneNumber' class='col-12 col-form-label'>Phone Number</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <input type='tel' class='form-control' id='phoneNumber' name='phoneNumber'>
                             </div>
                         </div>
                         <div class='row mb-2'>
                             <label for='reference-select' class='col-12 col-form-label'>How did you hear about us?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='reference' id='reference-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='drive-by'>Drive By: Leasing Banner / Sign</option>
@@ -96,7 +96,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='movedate-select' class='col-12 col-form-label'>When are you looking to move?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='movedate' id='movedate-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='lessthan2wks'>Within 2 weeks</option>
@@ -109,7 +109,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='budget-select' class='col-12 col-form-label'>How much are you looking to spend?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='budget' id='budget-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='800to900'>$800-$900</option>
@@ -122,7 +122,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='room-select' class='col-12 col-form-label'>What style of apartment?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='room' id='room-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='studio'>Studio</option>
@@ -134,7 +134,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='pet-select' class='col-12 col-form-label'>Do you have any pets?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='pet' id='pet-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='no'>No</option>
@@ -144,7 +144,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='building-select' class='col-12 col-form-label'>What Botique Apartments building are you interested in?</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='building' id='building-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='unsure'>I'm not sure</option>
@@ -158,7 +158,7 @@
                         </div>
                         <div class='row mb-2'>
                             <label for='tour-select' class='col-12 col-form-label'>What kind of tour would you prefer? (Subject to availability)</label>
-                            <div class='col-12 col-md-8'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <select name='tour' id='tour-select' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='virtual'>Virtual Tour</option>
@@ -168,59 +168,16 @@
                         </div>
                         <div class='row mb-4'>
                             <label for='comments' class='col-12 col-form-label'>Comments</label>
-                            <div class='col-12'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <textarea class='form-control' placeholder='Leave a comment here' id='comments'></textarea>
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-12'>
+                            <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
                                 <button class='btn btn-primary bg-gradient btn-block' type='submit'>Submit</button>
                             </div>
                         </div>
                     </form>
-                    {{-- <div class='row mb-2'>
-                        <div class='col-12 col-md-8'>
-                            <div class='form-floating'>
-                                <input name='contactName' type='text' class='form-control form-control-sm' id='contactName' placeholder='Name'>
-                                <label for='contactName'>Name</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row mb-2'>
-                        <div class='col-12 col-md-8'>
-                            <div class='form-floating'>
-                                <input name='email' type='email' class='form-control form-control-sm' id='email' placeholder='Email'>
-                                <label for='email'>Email</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row mb-2'>
-                        <div class='col-12 col-md-8'>
-                            <div class='form-floating'>
-                                <input name='phoneNumber' type='tel' class='form-control form-control-sm' id='phoneNumber' placeholder='Phone Number'>
-                                <label for='phoneNumber'>Phone Number</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row mb-2'>
-                        <div class='col-12 col-md-8'>
-                            <div class='form-floating'>
-                                <select name='reference' id='reference-select' class='form-select'>
-                                    <option value='' selected></option>
-                                    <option value='drive-by'>Drive By: Leasing Banner / Sign</option>
-                                    <option value='craigslist'>Craigslist</option>
-                                    <option value='friend'>Friend</option>
-                                    <option value='google'>Google Search</option>
-                                    <option value='zillowdotcom'>Zillow.com</option>
-                                    <option value='truliadotcom'>Trulia.com</option>
-                                    <option value='apartmentsdotcom'>Apartments.com</option>
-                                    <option value='facebook'>Facebook</option>
-                                    <option value='instagram'>Instagram</option>
-                                </select>
-                                <label for='phoneNumber'>How did you hear about us?</label>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>

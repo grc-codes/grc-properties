@@ -1,28 +1,32 @@
 #properties-page {
-    margin-bottom: 2rem;
-    min-height: 100vh;
-    padding: 25px !important;
-    ol.breadcrumb {
-        a {
-            text-decoration: none;
-        }
-    }
-    h5.text-center {
-        font-size: 2rem;
+    padding: 30px;
+    background: #f5f5f5;
+
+    .container-fluid {
         margin-bottom: 2rem;
-    }
-    .col.property {
-        margin-bottom: 1rem;
-        .hoverable {
-            -webkit-transition: -webkit-transform .2s, -webkit-box-shadow .2s;
-            transition: -webkit-transform .2s, -webkit-box-shadow .2s;
-            transition: transform .2s, box-shadow .2s;
-            transition: transform .2s, box-shadow .2s, -webkit-transform .2s, -webkit-box-shadow .2s;
-            &:hover {
-                -webkit-transform: translate3d(0, -.25rem, 0);
-                transform: translate3d(0, -.25rem, 0);
-                -webkit-box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
-                box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
+        
+        ol.breadcrumb {
+            a {
+                text-decoration: none;
+            }
+        }
+        h5.text-center {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .col.property {
+            margin-bottom: 1rem;
+            .hoverable {
+                -webkit-transition: -webkit-transform .2s, -webkit-box-shadow .2s;
+                transition: -webkit-transform .2s, -webkit-box-shadow .2s;
+                transition: transform .2s, box-shadow .2s;
+                transition: transform .2s, box-shadow .2s, -webkit-transform .2s, -webkit-box-shadow .2s;
+                &:hover {
+                    -webkit-transform: translate3d(0, -.25rem, 0);
+                    transform: translate3d(0, -.25rem, 0);
+                    -webkit-box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
+                    box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
+                }
             }
         }
     }
@@ -30,6 +34,6 @@
 
 @media screen and (min-width: 768px) {
     #properties-page {
-        padding: 80px;
+        padding: 60px;
     }
 }

@@ -1,5 +1,5 @@
 <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-    <div class='container-fluid'>
+    <div class='container-fluid px-4'>
         <a href='/' class='navbar-brand'>GRC</a>
         <button
             class='navbar-toggler collapsed ml-auto'
@@ -23,10 +23,10 @@
                 <a href='/rental-application' class='nav-link nav-item d-flex justify-content-center'>
                     Rental Application
                 </a>
-                <a href='/' class='nav-link nav-item d-flex justify-content-center'>
+                <a href='/resident' class='nav-link nav-item d-flex justify-content-center'>
                     Resident Account Access
                 </a>
-                <a href='/' class='nav-link nav-item d-flex justify-content-center'>
+                <a href='/manager' class='nav-link nav-item d-flex justify-content-center'>
                     Manager Account Access
                 </a>
                 <a href='/contact' class='nav-link nav-item d-flex justify-content-center'>

@@ -6,7 +6,12 @@
 @import 'pages/properties';
 @import 'pages/rentalApp';
 @import 'pages/contact';
+@import 'resident/registerLogin';
+@import 'resident/dashboard';
 
+html, body {
+    height: 100%;
+}
 
 nav {
     .navbar-nav {
@@ -15,6 +20,8 @@ nav {
             white-space: nowrap;
             letter-spacing: .02rem;
             font-size: .9rem;
+            padding-left: 0!important;
+            padding-right: 0!important;
         }
     }
 }
@@ -37,15 +44,12 @@ nav {
 
 
 
-
 @media screen and (min-width: 992px) {
     #app-layout {
         display: flex;
         height: 100%;
-        min-height: 100vh;
         nav {
             min-height: 100%;
-            width: 20%;
             .container-fluid {
                 display: flex;
                 flex-direction: column;
@@ -62,11 +66,11 @@ nav {
             }
         }
         #hero {
-            width: 80%;
+            width: 100%;
             height: auto;
         }
         #content-area {
-            width: 80%;
+            width: 100%;
             height: auto;
             overflow-y: scroll;
         }
@@ -75,4 +79,3 @@ nav {
         display: none;
     }
 }
-

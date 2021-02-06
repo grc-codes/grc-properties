@@ -26,7 +26,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -47,7 +47,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -68,7 +68,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -89,7 +89,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -110,7 +110,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -131,7 +131,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -152,7 +152,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -173,7 +173,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
@@ -194,7 +194,7 @@
             </div>
             <div class="col property">
                 <div class="card h-100 hoverable">
-                    <a href='/about'>
+                    <a href='/properties/SLUG'>
                         <div class='bg-image hover-zoom'>
                             <img
                                 src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
