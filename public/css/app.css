@@ -11130,21 +11130,47 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
   color: #7B9EA8;
 }
 
+#manager-layout {
+  padding-top: 56px;
+  display: flex;
+  min-height: 100%;
+}
+#manager-layout .menu-nav nav.navbar {
+  padding: 14px;
+}
+
+@media screen and (min-width: 992px) {
+  #manager-layout .menu-nav {
+    width: 20%;
+  }
+  #manager-layout .menu-nav nav {
+    height: 100%;
+  }
+  #manager-layout #manager-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 80%;
+    background: lightgrey;
+  }
+  #manager-layout #manager-content #manager-dashboard {
+    height: 100%;
+  }
+}
 html, body {
   height: 100%;
 }
 
-nav .navbar-nav a.nav-link {
+#app-layout {
+  min-height: 100%;
+}
+#app-layout #site-nav .navbar-nav a.nav-link {
   text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: 0.02rem;
   font-size: 0.9rem;
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-#app-layout {
-  min-height: 100vh;
 }
 #app-layout #hero {
   height: 100%;
@@ -11161,21 +11187,21 @@ nav .navbar-nav a.nav-link {
     display: flex;
     height: 100%;
   }
-  #app-layout nav {
+  #app-layout #site-nav {
     min-height: 100%;
   }
-  #app-layout nav .container-fluid, #app-layout nav .container-sm, #app-layout nav .container-md, #app-layout nav .container-lg, #app-layout nav .container-xl, #app-layout nav .container-xxl {
+  #app-layout #site-nav .container-fluid, #app-layout #site-nav .container-sm, #app-layout #site-nav .container-md, #app-layout #site-nav .container-lg, #app-layout #site-nav .container-xl, #app-layout #site-nav .container-xxl {
     display: flex;
     flex-direction: column;
   }
-  #app-layout nav .container-fluid .navbar-brand, #app-layout nav .container-sm .navbar-brand, #app-layout nav .container-md .navbar-brand, #app-layout nav .container-lg .navbar-brand, #app-layout nav .container-xl .navbar-brand, #app-layout nav .container-xxl .navbar-brand {
+  #app-layout #site-nav .container-fluid .navbar-brand, #app-layout #site-nav .container-sm .navbar-brand, #app-layout #site-nav .container-md .navbar-brand, #app-layout #site-nav .container-lg .navbar-brand, #app-layout #site-nav .container-xl .navbar-brand, #app-layout #site-nav .container-xxl .navbar-brand {
     margin: 0 auto;
     margin-bottom: 2rem;
   }
-  #app-layout nav .navbar-nav {
+  #app-layout #site-nav .navbar-nav {
     margin: 0 auto;
   }
-  #app-layout nav .navbar-nav a.nav-link {
+  #app-layout #site-nav .navbar-nav a.nav-link {
     justify-content: flex-start !important;
   }
   #app-layout #hero {

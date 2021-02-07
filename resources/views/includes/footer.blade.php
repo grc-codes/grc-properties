@@ -54,12 +54,7 @@
                     </a>
                 </li>
                 <li class='nav-item'>
-                    <a href='/admin' class='nav-link'>
-                        Resident Account Access
-                    </a>
-                </li>
-                <li class='nav-item'>
-                    <a href='/admin' class='nav-link'>
+                    <a href='/manager' class='nav-link'>
                         Manager Account Access
                     </a>
                 </li>

@@ -6,28 +6,26 @@
 @import 'pages/properties';
 @import 'pages/rentalApp';
 @import 'pages/contact';
-@import 'resident/registerLogin';
-@import 'resident/dashboard';
+@import 'manager/manager';
 
 html, body {
     height: 100%;
 }
 
-nav {
-    .navbar-nav {
-        a.nav-link {
-            text-transform: uppercase;
-            white-space: nowrap;
-            letter-spacing: .02rem;
-            font-size: .9rem;
-            padding-left: 0!important;
-            padding-right: 0!important;
+#app-layout {
+    min-height: 100%;
+    #site-nav {
+        .navbar-nav {
+            a.nav-link {
+                text-transform: uppercase;
+                white-space: nowrap;
+                letter-spacing: .02rem;
+                font-size: .9rem;
+                padding-left: 0!important;
+                padding-right: 0!important;
+            }
         }
     }
-}
-
-#app-layout {
-    min-height: 100vh;
     #hero {
         height: 100%;
         background: url(/img/hero-image.jpg) no-repeat center center fixed; 
@@ -48,7 +46,7 @@ nav {
     #app-layout {
         display: flex;
         height: 100%;
-        nav {
+        #site-nav {
             min-height: 100%;
             .container-fluid {
                 display: flex;

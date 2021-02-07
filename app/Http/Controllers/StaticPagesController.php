@@ -32,7 +32,7 @@ class StaticPagesController extends Controller
         return view('pages/contact');
     }
 
-    public function residentAccess() {
+    public function managerAccess() {
         return view('auth/login');
     }
 }

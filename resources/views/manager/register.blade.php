@@ -13,7 +13,7 @@
                     </a>
                 </h1>
                 <div class='content'>
-                    <h2>Sign up for resident access</h2>
+                    <h2>Sign up for manager access</h2>
                     <form action='/register' method='POST'>
                         <div class='row register'>
                             <div class='col-12 col-lg-6 mb-3'>
@@ -30,16 +30,10 @@
                             </div>
                         </div>
                         <div class='row register'>
-                            <div class='col-12 col-lg-6 mb-3 px-2'>
+                            <div class='col-12 col-lg-12 mb-3 px-2'>
                                 <div class='form-floating'>
                                     <input type='email' name='emailInput' id='emailInput' class='form-control' placeholder='Email Address'>
                                     <label for='emailInput'>Email Address</label>
-                                </div>
-                            </div>
-                            <div class='col-12 col-lg-6 mb-3 px-2'>
-                                <div class='form-floating'>
-                                    <input type='text' name='unitInput' id='unitInput' class='form-control' placeholder='Unit #'>
-                                    <label for='unitInput'>Unit #</label>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +41,7 @@
                             Sign Up
                         </button>
                     </form>
-                    <a href='/resident/login'>
+                    <a href='/manager/login'>
                         Already Signed Up? <span>Log In</span>
                     </a>
                 </div>

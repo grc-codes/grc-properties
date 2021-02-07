@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPagesController;
-use App\Http\Controllers\ResidentController;
+use App\Http\Controllers\ManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +26,10 @@ Route::get('/contact', [StaticPagesController::class, 'contact']);
 Route::get('/properties', [StaticPagesController::class, 'properties']);
 Route::get('/properties/{propName}', [StaticPagesController::class, 'singleProperty']);
 
-// Resident Pages
-Route::get('/resident', [ResidentController::class, 'residentDash']);
-Route::get('/resident/register', [ResidentController::class, 'residentRegister']);
-Route::get('/resident/login', [ResidentController::class, 'residentLogin']);
+// Manager Pages
+Route::get('/manager', [ManagerController::class, 'managerDash']);
+Route::get('/manager/register', [ManagerController::class, 'managerRegister']);
+Route::get('/manager/login', [ManagerController::class, 'managerLogin']);
 
 
 Auth::routes();

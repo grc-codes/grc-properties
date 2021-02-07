@@ -1,4 +1,4 @@
-<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+<nav id='site-nav' class='navbar navbar-expand-lg navbar-dark bg-dark'>
     <div class='container-fluid px-4'>
         <a href='/' class='navbar-brand'>GRC</a>
         <button
@@ -23,14 +23,11 @@
                 <a href='/rental-application' class='nav-link nav-item d-flex justify-content-center'>
                     Rental Application
                 </a>
-                <a href='/resident' class='nav-link nav-item d-flex justify-content-center'>
-                    Resident Account Access
+                <a href='/contact' class='nav-link nav-item d-flex justify-content-center'>
+                    Contact
                 </a>
                 <a href='/manager' class='nav-link nav-item d-flex justify-content-center'>
                     Manager Account Access
-                </a>
-                <a href='/contact' class='nav-link nav-item d-flex justify-content-center'>
-                    Contact
                 </a>
             </div>
         </div>

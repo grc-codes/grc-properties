@@ -3,11 +3,12 @@
         @include('includes.metatags-head')
     </head>
     <body class='antialiased'>
-        <div id='resident-layout'>
-            @include('includes.resident-navbar')
-            <div id='content-area'>
+        @include('includes.manager-navbar')
+        <div id='manager-layout'>
+            @include('includes.manager-sidemenu')
+            <div id='manager-content'>
                 @yield('content')
-                @include('includes.resident-footer')
+                @include('includes.manager-footer')
             </div>
         </div>
     </body>

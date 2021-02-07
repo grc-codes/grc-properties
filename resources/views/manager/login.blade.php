@@ -41,8 +41,8 @@
                             Log In
                         </button>
                     </form>
-                    <a href='/resident/register'>
-                        New Resident? <span>Sign Up</span>
+                    <a href='/manager/register'>
+                        New Employee? <span>Sign Up</span>
                     </a>
                 </div>
             </div>

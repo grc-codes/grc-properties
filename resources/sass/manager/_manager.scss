@@ -1,0 +1,35 @@
+@import 'registerLogin';
+@import 'dashboard';
+
+
+#manager-layout {
+    padding-top: 56px;
+    display: flex;
+    min-height: 100%;
+    .menu-nav {
+        nav.navbar {
+            padding: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #manager-layout {
+        .menu-nav {
+            width: 20%;
+            nav {
+                height: 100%;
+            }
+        }
+        #manager-content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            width: 80%;
+            background: lightgrey;
+            #manager-dashboard {
+                height: 100%;
+            }
+        }
+    }
+}
