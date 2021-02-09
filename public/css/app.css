@@ -11130,31 +11130,101 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
   color: #7B9EA8;
 }
 
-#manager-layout {
-  padding-top: 56px;
-  display: flex;
-  min-height: 100%;
+#header-nav nav.navbar {
+  background: #f5f5f5;
 }
-#manager-layout .menu-nav nav.navbar {
-  padding: 14px;
+#header-nav nav.navbar a {
+  color: #1E3338;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#manager-layout {
+  padding-top: 74px;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+#manager-layout nav#manager-sidemenu {
+  background: #146c43 !important;
+  width: 100%;
+}
+#manager-layout nav#manager-sidemenu a.navbar-brand {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+#manager-layout nav#manager-sidemenu #navbarToggler ul.navbar-nav {
+  list-style: none;
+}
+#manager-layout nav#manager-sidemenu #navbarToggler li.nav-divider {
+  padding: 10px 14px;
+  line-height: 1.5;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #a3cfbb;
+}
+#manager-layout nav#manager-sidemenu li.nav-item:focus, #manager-layout nav#manager-sidemenu li.nav-item:hover, #manager-layout nav#manager-sidemenu li.nav-item:active {
+  background: #198754;
+  color: #fff;
+  border-radius: 2px;
+}
+#manager-layout nav#manager-sidemenu li.nav-item .submenu {
+  padding: 0 12px;
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #a3cfbb;
+  font-size: 0.9rem;
+  padding: 12px;
+  text-decoration: none;
+  transform: all 5s ease-in-out;
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link i.fas {
+  color: #a3cfbb;
+  margin-right: 9px;
+  font-weight: 900;
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link .caret {
+  margin-left: auto;
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link:hover, #manager-layout nav#manager-sidemenu li.nav-item a.nav-link:focus {
+  color: #fff;
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link[data-toggle=collapse][aria-expanded=false]::after {
+  transform: rotate(-90deg);
+}
+#manager-layout nav#manager-sidemenu li.nav-item a.nav-link[data-toggle=collapse]::after {
+  margin-left: auto;
+  transition: transform 0.35 ease, opacity 0.35 ease;
+  opacity: 0.5;
+}
+#manager-layout #manager-content {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#manager-layout #manager-content #manager-dashboard {
+  height: 100%;
 }
 
 @media screen and (min-width: 992px) {
-  #manager-layout .menu-nav {
-    width: 20%;
-  }
-  #manager-layout .menu-nav nav {
-    height: 100%;
-  }
-  #manager-layout #manager-content {
+  #manager-layout {
     display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    width: 80%;
-    background: lightgrey;
   }
-  #manager-layout #manager-content #manager-dashboard {
-    height: 100%;
+  #manager-layout nav#manager-sidemenu {
+    width: 20%;
+    height: auto;
+    min-height: 100%;
+    max-width: 265px;
   }
 }
 html, body {
@@ -11164,7 +11234,7 @@ html, body {
 #app-layout {
   min-height: 100%;
 }
-#app-layout #site-nav .navbar-nav a.nav-link {
+#app-layout nav#site-nav a.nav-link {
   text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: 0.02rem;

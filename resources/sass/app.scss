@@ -14,16 +14,14 @@ html, body {
 
 #app-layout {
     min-height: 100%;
-    #site-nav {
-        .navbar-nav {
-            a.nav-link {
-                text-transform: uppercase;
-                white-space: nowrap;
-                letter-spacing: .02rem;
-                font-size: .9rem;
-                padding-left: 0!important;
-                padding-right: 0!important;
-            }
+    nav#site-nav {
+        a.nav-link {
+            text-transform: uppercase;
+            white-space: nowrap;
+            letter-spacing: .02rem;
+            font-size: .9rem;
+            padding-left: 0!important;
+            padding-right: 0!important;
         }
     }
     #hero {
