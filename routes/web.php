@@ -30,6 +30,9 @@ Route::get('/properties/{propName}', [StaticPagesController::class, 'singlePrope
 Route::get('/manager', [ManagerController::class, 'managerDash']);
 Route::get('/manager/register', [ManagerController::class, 'managerRegister']);
 Route::get('/manager/login', [ManagerController::class, 'managerLogin']);
+Route::get('/manager/properties', [ManagerController::class, 'allProperties']);
+Route::get('/manager/properties/create', [ManagerController::class, 'managerLogin']);
+
 
 
 Auth::routes();
