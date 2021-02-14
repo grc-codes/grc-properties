@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\UnitController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +30,18 @@ Route::get('/properties', [StaticPagesController::class, 'properties']);
 Route::get('/properties/{propName}', [StaticPagesController::class, 'singleProperty']);
 
 // Manager Pages
-Route::get('/manager', [ManagerController::class, 'managerDash']);
-Route::get('/manager/register', [ManagerController::class, 'managerRegister']);
-Route::get('/manager/login', [ManagerController::class, 'managerLogin']);
-Route::get('/manager/properties', [ManagerController::class, 'allProperties']);
-Route::get('/manager/properties/create', [ManagerController::class, 'managerLogin']);
+Route::get('/manager', [ManagerController::class, 'dashboard']);
+Route::get('/manager/register', [ManagerController::class, 'register']);
+Route::get('/manager/login', [ManagerController::class, 'login']);
 
+// Manager Property Pages
+Route::get('/manager/properties', [PropertyController::class, 'index']);
+Route::get('/manager/properties/create', [PropertyController::class, 'create']);
+Route::get('/manager/properties/{slug}/edit', [PropertyController::class, 'edit']);
+
+// Manager Units Pages
+Route::get('/manager/units', [UnitController::class, 'index']);
+Route::get('/manager/units/available', [UnitController::class, 'available']);
 
 
 Auth::routes();

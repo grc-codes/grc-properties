@@ -6,15 +6,19 @@ use Illuminate\Http\Request;
 
 class ManagerController extends Controller
 {
-    public function managerDash() {
+    // public function __construct() {
+    //     $this->middleware('auth');
+    // }
+    
+    public function dashboard() {
         return view('/manager/dashboard');
     }
 
-    public function managerRegister() {
+    public function register() {
         return view('/manager/register');
     }
 
-    public function managerLogin() {
+    public function login() {
         return view('/manager/login');
     }
 }

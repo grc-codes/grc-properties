@@ -6,10 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller {
-    public function __construct() {
-        $this->middleware('auth');
-    }
-
     public function index() {
         return view('manager/properties/all');
     }
@@ -18,7 +14,7 @@ class PropertyController extends Controller {
         return view('manager/properties/create');
     }
 
-    public function edit($id) {
+    public function edit($slug) {
         return view('manager/properties/edit');
     }
 }

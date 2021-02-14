@@ -5,10 +5,34 @@
     .container-fluid {
         margin-bottom: 2rem;
         
-        ol.breadcrumb {
-            a {
-                text-decoration: none;
+        .page-header {
+            margin-bottom: 2rem;
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
             }
+            nav {
+                ol.breadcrumb {
+                    margin-bottom: 0;
+                    padding-top: .625rem;
+                    border-top: 1px solid #e0e4ef;
+                    font-size: .75rem;
+                    display: flex;
+                    background: transparent;
+                    list-style: none;
+                    li.breadcrumb-item {
+                        a.breadcrumb-link {
+                            text-decoration: none;
+                            color: $blue-400;
+                            font-size: .75rem;
+                            &:hover {
+                                color: $blue-300;
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
         h5.text-center {
             font-size: 2rem;

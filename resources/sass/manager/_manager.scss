@@ -1,5 +1,6 @@
 @import 'registerLogin';
 @import 'dashboard';
+@import 'properties';
 
 #header-nav {
     nav.navbar {
@@ -100,6 +101,7 @@
             min-height: 100%;
             height: 100%;
             width: 100%;
+            overflow-y: scroll;
         }
     }
 

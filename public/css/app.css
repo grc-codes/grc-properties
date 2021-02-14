@@ -10965,8 +10965,29 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 #properties-page .container-fluid, #properties-page .container-sm, #properties-page .container-md, #properties-page .container-lg, #properties-page .container-xl, #properties-page .container-xxl {
   margin-bottom: 2rem;
 }
-#properties-page .container-fluid ol.breadcrumb a, #properties-page .container-sm ol.breadcrumb a, #properties-page .container-md ol.breadcrumb a, #properties-page .container-lg ol.breadcrumb a, #properties-page .container-xl ol.breadcrumb a, #properties-page .container-xxl ol.breadcrumb a {
+#properties-page .container-fluid .page-header, #properties-page .container-sm .page-header, #properties-page .container-md .page-header, #properties-page .container-lg .page-header, #properties-page .container-xl .page-header, #properties-page .container-xxl .page-header {
+  margin-bottom: 2rem;
+}
+#properties-page .container-fluid .page-header h2, #properties-page .container-sm .page-header h2, #properties-page .container-md .page-header h2, #properties-page .container-lg .page-header h2, #properties-page .container-xl .page-header h2, #properties-page .container-xxl .page-header h2, #properties-page .container-fluid .page-header .h2, #properties-page .container-sm .page-header .h2, #properties-page .container-md .page-header .h2, #properties-page .container-lg .page-header .h2, #properties-page .container-xl .page-header .h2, #properties-page .container-xxl .page-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#properties-page .container-fluid .page-header nav ol.breadcrumb, #properties-page .container-sm .page-header nav ol.breadcrumb, #properties-page .container-md .page-header nav ol.breadcrumb, #properties-page .container-lg .page-header nav ol.breadcrumb, #properties-page .container-xl .page-header nav ol.breadcrumb, #properties-page .container-xxl .page-header nav ol.breadcrumb {
+  margin-bottom: 0;
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+}
+#properties-page .container-fluid .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #properties-page .container-sm .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #properties-page .container-md .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #properties-page .container-lg .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #properties-page .container-xl .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #properties-page .container-xxl .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
   text-decoration: none;
+  color: #3d8bfd;
+  font-size: 0.75rem;
+}
+#properties-page .container-fluid .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #properties-page .container-sm .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #properties-page .container-md .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #properties-page .container-lg .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #properties-page .container-xl .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #properties-page .container-xxl .page-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #6ea8fe;
 }
 #properties-page .container-fluid h5.text-center, #properties-page .container-sm h5.text-center, #properties-page .container-md h5.text-center, #properties-page .container-lg h5.text-center, #properties-page .container-xl h5.text-center, #properties-page .container-xxl h5.text-center, #properties-page .container-fluid .text-center.h5, #properties-page .container-sm .text-center.h5, #properties-page .container-md .text-center.h5, #properties-page .container-lg .text-center.h5, #properties-page .container-xl .text-center.h5, #properties-page .container-xxl .text-center.h5 {
   font-size: 2rem;
@@ -11196,6 +11217,57 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
     padding: 30px 30px 60px;
   }
 }
+#all-properties {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 20px 20px 60px;
+}
+#all-properties .container-fluid, #all-properties .container-sm, #all-properties .container-md, #all-properties .container-lg, #all-properties .container-xl, #all-properties .container-xxl {
+  padding: 0;
+}
+#all-properties .container-fluid .properties-header, #all-properties .container-sm .properties-header, #all-properties .container-md .properties-header, #all-properties .container-lg .properties-header, #all-properties .container-xl .properties-header, #all-properties .container-xxl .properties-header {
+  margin-bottom: 2rem;
+}
+#all-properties .container-fluid .properties-header h2, #all-properties .container-sm .properties-header h2, #all-properties .container-md .properties-header h2, #all-properties .container-lg .properties-header h2, #all-properties .container-xl .properties-header h2, #all-properties .container-xxl .properties-header h2, #all-properties .container-fluid .properties-header .h2, #all-properties .container-sm .properties-header .h2, #all-properties .container-md .properties-header .h2, #all-properties .container-lg .properties-header .h2, #all-properties .container-xl .properties-header .h2, #all-properties .container-xxl .properties-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#all-properties .container-fluid .properties-header nav ol.breadcrumb, #all-properties .container-sm .properties-header nav ol.breadcrumb, #all-properties .container-md .properties-header nav ol.breadcrumb, #all-properties .container-lg .properties-header nav ol.breadcrumb, #all-properties .container-xl .properties-header nav ol.breadcrumb, #all-properties .container-xxl .properties-header nav ol.breadcrumb {
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+  margin-bottom: 0;
+}
+#all-properties .container-fluid .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-properties .container-sm .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-properties .container-md .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-properties .container-lg .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-properties .container-xl .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-properties .container-xxl .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
+  text-decoration: none;
+  color: #479f76;
+  font-size: 0.75rem;
+}
+#all-properties .container-fluid .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-properties .container-sm .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-properties .container-md .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-properties .container-lg .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-properties .container-xl .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-properties .container-xxl .properties-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #75b798;
+}
+#all-properties .container-fluid #form-container, #all-properties .container-sm #form-container, #all-properties .container-md #form-container, #all-properties .container-lg #form-container, #all-properties .container-xl #form-container, #all-properties .container-xxl #form-container {
+  margin: 0 auto;
+  max-width: 650px;
+}
+#all-properties .container-fluid table.table td a, #all-properties .container-sm table.table td a, #all-properties .container-md table.table td a, #all-properties .container-lg table.table td a, #all-properties .container-xl table.table td a, #all-properties .container-xxl table.table td a {
+  color: #479f76;
+}
+#all-properties .container-fluid table.table td a i.far:hover, #all-properties .container-sm table.table td a i.far:hover, #all-properties .container-md table.table td a i.far:hover, #all-properties .container-lg table.table td a i.far:hover, #all-properties .container-xl table.table td a i.far:hover, #all-properties .container-xxl table.table td a i.far:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  #all-properties {
+    padding: 30px 30px 60px;
+  }
+  #all-properties .container-fluid #form-container, #all-properties .container-sm #form-container, #all-properties .container-md #form-container, #all-properties .container-lg #form-container, #all-properties .container-xl #form-container, #all-properties .container-xxl #form-container {
+    max-width: 800px;
+  }
+}
 #header-nav nav.navbar {
   background: #fff;
   box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
@@ -11287,6 +11359,7 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
   min-height: 100%;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 992px) {
