@@ -21,4 +21,24 @@ class ManagerController extends Controller
     public function login() {
         return view('/manager/login');
     }
+
+    public function emailList() {
+        return view('/manager/messages/email-list');
+    }
+
+    public function siteMessages() {
+        return view('/manager/messages/messages');
+    }
+
+    public function siteMessage() {
+        return view('/manager/messages/message');
+    }
+
+    public function rentalApps() {
+        return view('/manager/messages/rental-applications');
+    }
+
+    public function rentalApp() {
+        return view('/manager/messages/rental-application');
+    }
 }

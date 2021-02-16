@@ -1,10 +1,10 @@
-#all-properties {
+#messages {
     background: #f5f5f5;
     min-height: 100%;
     padding: 20px 20px 60px;
     .container-fluid {
         padding: 0;
-        .properties-header {
+        .messages-header {
             margin-bottom: 2rem;
             h2 {
                 font-size: 1.5rem;
@@ -32,10 +32,6 @@
                 }
             }
         }
-        #form-container {
-            margin: 0 auto;
-            max-width: 650px;
-        }
         table.table {
             td {
                 a {
@@ -52,12 +48,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    #all-properties {
-        padding: 40px 40px 40px;
-        .container-fluid {
-            #form-container {
-                max-width: 800px;
-            }
-        }
+    #messages {
+        padding: 40px 40px 60px;
     }
 }

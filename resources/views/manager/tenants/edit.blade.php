@@ -1,22 +1,22 @@
 @extends('layouts.manager')
 
 @section('content')
-<section id='all-properties'>
+<section id='all-tenants'>
     <div class='container-fluid'>
         <div class='row'>
             <div class='col-12'>
-                <div class='properties-header'>
-                    <h2>Edit Property</h2>
+                <div class='tenants-header'>
+                    <h2>Edit Tenant</h2>
                     <nav aria-label='breadcrumb'>
                         <ol class='breadcrumb'>
                             <li class='breadcrumb-item'>
                                 <a href='/manager' class='breadcrumb-link'>Dashboard</a>
                             </li>
                             <li class='breadcrumb-item'>
-                                <a href='/manager/properties' class='breadcrumb-link'>Properties</a>
+                                <a href='/manager/tenants' class='breadcrumb-link'>Tenants</a>
                             </li>
                             <li class='breadcrumb-item active' aria-current='page'>
-                                Edit Property
+                                Edit Tenant
                             </li>
                         </ol>
                     </nav>
@@ -25,63 +25,57 @@
         </div>
         <div class='row'>
             <div id='form-container' class='col-12'>
-                <form action='/manager/properties' class='container-fluid'>
+                <form action='/manager/tenants' class='container-fluid'>
                     <div class='card'>
                         <div class='card-header'>
                             <h3 class='mb-1 text-center'>
-                                Edit property
+                                Edit tenant
                             </h3>
                         </div>
                         <div class='card-body'>
                             <div class='row mb-3'>
-                                <label for='propertyName' class='col-sm-4 col-form-label'>
-                                    Property Name
+                                <label for='firstName' class='col-sm-4 col-form-label'>
+                                    First Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Knickerbocker' name='propertyName' type='text' id='propertyName' class='form-control'>
+                                    <input placeholder='Joe' name='firstName' type='text' id='firstName' class='form-control'>
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='location' class='col-sm-4 col-form-label'>
-                                    Location
+                                <label for='lastName' class='col-sm-4 col-form-label'>
+                                    Last Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='New York NY' name='location' type='text' id='location' class='form-control'>
+                                    <input placeholder='Doe' name='lastName' type='text' id='lastName' class='form-control'>
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='propertyImage' class='col-sm-4 col-form-label'>
-                                    Property Image URL
+                                <label for='email' class='col-sm-4 col-form-label'>
+                                    Email
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='/img/building.png' name='propertyImage' type='text' id='propertyImage' class='form-control'>
+                                    <input placeholder='jdoe@gmail.com' name='email' type='email' id='email' class='form-control'>
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='floors' class='col-sm-4 col-form-label'>
-                                    Floors
+                                <label for='phone' class='col-sm-4 col-form-label'>
+                                    Phone
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='floors' id='floors' class='form-select'>
-                                        <option selected value='1'>1</option>
-                                        <option value='2'>2</option>
-                                        <option value='3'>3</option>
-                                        <option value='4'>4</option>
-                                        <option value='5'>5</option>
-                                    </select>
+                                    <input placeholder='917-123-4566' name='phone' type='tel' id='phone' class='form-control'>
                                 </div>
                             </div>
                             <div class='row mb-5'>
-                                <label for='unitsPerFloor' class='col-sm-4 col-form-label'>
-                                    Units Per Floor
+                                <label for='unit' class='col-sm-4 col-form-label'>
+                                    Unit
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='unitsPerFloor' id='unitsPerFloor' class='form-select'>
-                                        <option selected value='10'>10</option>
-                                        <option value='20'>20</option>
-                                        <option value='30'>30</option>
-                                        <option value='40'>40</option>
-                                        <option value='50'>50</option>
+                                    <select name='unit' id='unit' class='form-select'>
+                                        <option selected value='bk101'>BK 101</option>
+                                        <option value='bk102'>BK 102</option>
+                                        <option value='bk103'>BK 103</option>
+                                        <option value='bk104'>BK 104</option>
+                                        <option value='bk105'>BK 105</option>
                                     </select>
                                 </div>
                             </div>

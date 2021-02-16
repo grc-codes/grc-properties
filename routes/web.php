@@ -5,6 +5,8 @@ use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\TenantController;
+
 
 
 /*
@@ -33,6 +35,14 @@ Route::get('/properties/{propName}', [StaticPagesController::class, 'singlePrope
 Route::get('/manager', [ManagerController::class, 'dashboard']);
 Route::get('/manager/register', [ManagerController::class, 'register']);
 Route::get('/manager/login', [ManagerController::class, 'login']);
+Route::get('/manager/email-list', [ManagerController::class, 'emailList']);
+Route::get('/manager/messages', [ManagerController::class, 'siteMessages']);
+Route::get('/manager/messages/{id}', [ManagerController::class, 'siteMessage']);
+Route::get('/manager/rental-applications', [ManagerController::class, 'rentalApps']);
+Route::get('/manager/rental-applications/{id}', [ManagerController::class, 'rentalApp']);
+
+
+
 
 // Manager Property Pages
 Route::get('/manager/properties', [PropertyController::class, 'index']);
@@ -42,6 +52,11 @@ Route::get('/manager/properties/{slug}/edit', [PropertyController::class, 'edit'
 // Manager Units Pages
 Route::get('/manager/units', [UnitController::class, 'index']);
 Route::get('/manager/units/available', [UnitController::class, 'available']);
+
+// Manager Tenants Pages
+Route::get('/manager/tenants', [TenantController::class, 'index']);
+Route::get('/manager/tenants/create', [TenantController::class, 'create']);
+Route::get('/manager/tenants/{slug}/edit', [TenantController::class, 'edit']);
 
 
 Auth::routes();

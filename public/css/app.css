@@ -11153,10 +11153,11 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 
 #manager-dashboard {
   background: #f5f5f5;
-  height: 100%;
+  min-height: 100%;
+  padding: 20px 20px 60px;
 }
 #manager-dashboard .container-fluid, #manager-dashboard .container-sm, #manager-dashboard .container-md, #manager-dashboard .container-lg, #manager-dashboard .container-xl, #manager-dashboard .container-xxl {
-  padding: 20px 20px 60px;
+  padding: 0;
 }
 #manager-dashboard .container-fluid .dashboard-header, #manager-dashboard .container-sm .dashboard-header, #manager-dashboard .container-md .dashboard-header, #manager-dashboard .container-lg .dashboard-header, #manager-dashboard .container-xl .dashboard-header, #manager-dashboard .container-xxl .dashboard-header {
   margin-bottom: 2rem;
@@ -11213,8 +11214,8 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 }
 
 @media screen and (min-width: 992px) {
-  #manager-dashboard .container-fluid, #manager-dashboard .container-sm, #manager-dashboard .container-md, #manager-dashboard .container-lg, #manager-dashboard .container-xl, #manager-dashboard .container-xxl {
-    padding: 30px 30px 60px;
+  #manager-dashboard {
+    padding: 40px 40px 60px;
   }
 }
 #all-properties {
@@ -11262,10 +11263,200 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 
 @media screen and (min-width: 992px) {
   #all-properties {
-    padding: 30px 30px 60px;
+    padding: 40px 40px 40px;
   }
   #all-properties .container-fluid #form-container, #all-properties .container-sm #form-container, #all-properties .container-md #form-container, #all-properties .container-lg #form-container, #all-properties .container-xl #form-container, #all-properties .container-xxl #form-container {
     max-width: 800px;
+  }
+}
+#all-units {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 20px 20px 60px;
+}
+#all-units .container-fluid, #all-units .container-sm, #all-units .container-md, #all-units .container-lg, #all-units .container-xl, #all-units .container-xxl {
+  padding: 0;
+}
+#all-units .container-fluid .units-header, #all-units .container-sm .units-header, #all-units .container-md .units-header, #all-units .container-lg .units-header, #all-units .container-xl .units-header, #all-units .container-xxl .units-header {
+  margin-bottom: 2rem;
+}
+#all-units .container-fluid .units-header h2, #all-units .container-sm .units-header h2, #all-units .container-md .units-header h2, #all-units .container-lg .units-header h2, #all-units .container-xl .units-header h2, #all-units .container-xxl .units-header h2, #all-units .container-fluid .units-header .h2, #all-units .container-sm .units-header .h2, #all-units .container-md .units-header .h2, #all-units .container-lg .units-header .h2, #all-units .container-xl .units-header .h2, #all-units .container-xxl .units-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#all-units .container-fluid .units-header nav ol.breadcrumb, #all-units .container-sm .units-header nav ol.breadcrumb, #all-units .container-md .units-header nav ol.breadcrumb, #all-units .container-lg .units-header nav ol.breadcrumb, #all-units .container-xl .units-header nav ol.breadcrumb, #all-units .container-xxl .units-header nav ol.breadcrumb {
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+  margin-bottom: 0;
+}
+#all-units .container-fluid .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-units .container-sm .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-units .container-md .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-units .container-lg .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-units .container-xl .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-units .container-xxl .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
+  text-decoration: none;
+  color: #479f76;
+  font-size: 0.75rem;
+}
+#all-units .container-fluid .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-units .container-sm .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-units .container-md .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-units .container-lg .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-units .container-xl .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-units .container-xxl .units-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #75b798;
+}
+#all-units .container-fluid #form-container, #all-units .container-sm #form-container, #all-units .container-md #form-container, #all-units .container-lg #form-container, #all-units .container-xl #form-container, #all-units .container-xxl #form-container {
+  margin: 0 auto;
+  max-width: 650px;
+}
+#all-units .container-fluid table.table td a, #all-units .container-sm table.table td a, #all-units .container-md table.table td a, #all-units .container-lg table.table td a, #all-units .container-xl table.table td a, #all-units .container-xxl table.table td a {
+  color: #479f76;
+}
+#all-units .container-fluid table.table td a i.far:hover, #all-units .container-sm table.table td a i.far:hover, #all-units .container-md table.table td a i.far:hover, #all-units .container-lg table.table td a i.far:hover, #all-units .container-xl table.table td a i.far:hover, #all-units .container-xxl table.table td a i.far:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  #all-units {
+    padding: 40px 40px 60px;
+  }
+  #all-units .container-fluid #form-container, #all-units .container-sm #form-container, #all-units .container-md #form-container, #all-units .container-lg #form-container, #all-units .container-xl #form-container, #all-units .container-xxl #form-container {
+    max-width: 800px;
+  }
+}
+#all-tenants {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 20px 20px 60px;
+}
+#all-tenants .container-fluid, #all-tenants .container-sm, #all-tenants .container-md, #all-tenants .container-lg, #all-tenants .container-xl, #all-tenants .container-xxl {
+  padding: 0;
+}
+#all-tenants .container-fluid .tenants-header, #all-tenants .container-sm .tenants-header, #all-tenants .container-md .tenants-header, #all-tenants .container-lg .tenants-header, #all-tenants .container-xl .tenants-header, #all-tenants .container-xxl .tenants-header {
+  margin-bottom: 2rem;
+}
+#all-tenants .container-fluid .tenants-header h2, #all-tenants .container-sm .tenants-header h2, #all-tenants .container-md .tenants-header h2, #all-tenants .container-lg .tenants-header h2, #all-tenants .container-xl .tenants-header h2, #all-tenants .container-xxl .tenants-header h2, #all-tenants .container-fluid .tenants-header .h2, #all-tenants .container-sm .tenants-header .h2, #all-tenants .container-md .tenants-header .h2, #all-tenants .container-lg .tenants-header .h2, #all-tenants .container-xl .tenants-header .h2, #all-tenants .container-xxl .tenants-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#all-tenants .container-fluid .tenants-header nav ol.breadcrumb, #all-tenants .container-sm .tenants-header nav ol.breadcrumb, #all-tenants .container-md .tenants-header nav ol.breadcrumb, #all-tenants .container-lg .tenants-header nav ol.breadcrumb, #all-tenants .container-xl .tenants-header nav ol.breadcrumb, #all-tenants .container-xxl .tenants-header nav ol.breadcrumb {
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+  margin-bottom: 0;
+}
+#all-tenants .container-fluid .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-tenants .container-sm .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-tenants .container-md .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-tenants .container-lg .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-tenants .container-xl .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #all-tenants .container-xxl .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
+  text-decoration: none;
+  color: #479f76;
+  font-size: 0.75rem;
+}
+#all-tenants .container-fluid .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-tenants .container-sm .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-tenants .container-md .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-tenants .container-lg .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-tenants .container-xl .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #all-tenants .container-xxl .tenants-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #75b798;
+}
+#all-tenants .container-fluid #form-container, #all-tenants .container-sm #form-container, #all-tenants .container-md #form-container, #all-tenants .container-lg #form-container, #all-tenants .container-xl #form-container, #all-tenants .container-xxl #form-container {
+  margin: 0 auto;
+  max-width: 650px;
+}
+#all-tenants .container-fluid table.table td a, #all-tenants .container-sm table.table td a, #all-tenants .container-md table.table td a, #all-tenants .container-lg table.table td a, #all-tenants .container-xl table.table td a, #all-tenants .container-xxl table.table td a {
+  color: #479f76;
+}
+#all-tenants .container-fluid table.table td a i.far:hover, #all-tenants .container-sm table.table td a i.far:hover, #all-tenants .container-md table.table td a i.far:hover, #all-tenants .container-lg table.table td a i.far:hover, #all-tenants .container-xl table.table td a i.far:hover, #all-tenants .container-xxl table.table td a i.far:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  #all-tenants {
+    padding: 40px 40px 60px;
+  }
+  #all-tenants .container-fluid #form-container, #all-tenants .container-sm #form-container, #all-tenants .container-md #form-container, #all-tenants .container-lg #form-container, #all-tenants .container-xl #form-container, #all-tenants .container-xxl #form-container {
+    max-width: 800px;
+  }
+}
+#messages {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 20px 20px 60px;
+}
+#messages .container-fluid, #messages .container-sm, #messages .container-md, #messages .container-lg, #messages .container-xl, #messages .container-xxl {
+  padding: 0;
+}
+#messages .container-fluid .messages-header, #messages .container-sm .messages-header, #messages .container-md .messages-header, #messages .container-lg .messages-header, #messages .container-xl .messages-header, #messages .container-xxl .messages-header {
+  margin-bottom: 2rem;
+}
+#messages .container-fluid .messages-header h2, #messages .container-sm .messages-header h2, #messages .container-md .messages-header h2, #messages .container-lg .messages-header h2, #messages .container-xl .messages-header h2, #messages .container-xxl .messages-header h2, #messages .container-fluid .messages-header .h2, #messages .container-sm .messages-header .h2, #messages .container-md .messages-header .h2, #messages .container-lg .messages-header .h2, #messages .container-xl .messages-header .h2, #messages .container-xxl .messages-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#messages .container-fluid .messages-header nav ol.breadcrumb, #messages .container-sm .messages-header nav ol.breadcrumb, #messages .container-md .messages-header nav ol.breadcrumb, #messages .container-lg .messages-header nav ol.breadcrumb, #messages .container-xl .messages-header nav ol.breadcrumb, #messages .container-xxl .messages-header nav ol.breadcrumb {
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+  margin-bottom: 0;
+}
+#messages .container-fluid .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #messages .container-sm .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #messages .container-md .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #messages .container-lg .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #messages .container-xl .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #messages .container-xxl .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
+  text-decoration: none;
+  color: #479f76;
+  font-size: 0.75rem;
+}
+#messages .container-fluid .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #messages .container-sm .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #messages .container-md .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #messages .container-lg .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #messages .container-xl .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #messages .container-xxl .messages-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #75b798;
+}
+#messages .container-fluid table.table td a, #messages .container-sm table.table td a, #messages .container-md table.table td a, #messages .container-lg table.table td a, #messages .container-xl table.table td a, #messages .container-xxl table.table td a {
+  color: #479f76;
+}
+#messages .container-fluid table.table td a i.far:hover, #messages .container-sm table.table td a i.far:hover, #messages .container-md table.table td a i.far:hover, #messages .container-lg table.table td a i.far:hover, #messages .container-xl table.table td a i.far:hover, #messages .container-xxl table.table td a i.far:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  #messages {
+    padding: 40px 40px 60px;
+  }
+}
+#rental-applications {
+  background: #f5f5f5;
+  min-height: 100%;
+  padding: 20px 20px 60px;
+}
+#rental-applications .container-fluid, #rental-applications .container-sm, #rental-applications .container-md, #rental-applications .container-lg, #rental-applications .container-xl, #rental-applications .container-xxl {
+  padding: 0;
+}
+#rental-applications .container-fluid .rental-applications-header, #rental-applications .container-sm .rental-applications-header, #rental-applications .container-md .rental-applications-header, #rental-applications .container-lg .rental-applications-header, #rental-applications .container-xl .rental-applications-header, #rental-applications .container-xxl .rental-applications-header {
+  margin-bottom: 2rem;
+}
+#rental-applications .container-fluid .rental-applications-header h2, #rental-applications .container-sm .rental-applications-header h2, #rental-applications .container-md .rental-applications-header h2, #rental-applications .container-lg .rental-applications-header h2, #rental-applications .container-xl .rental-applications-header h2, #rental-applications .container-xxl .rental-applications-header h2, #rental-applications .container-fluid .rental-applications-header .h2, #rental-applications .container-sm .rental-applications-header .h2, #rental-applications .container-md .rental-applications-header .h2, #rental-applications .container-lg .rental-applications-header .h2, #rental-applications .container-xl .rental-applications-header .h2, #rental-applications .container-xxl .rental-applications-header .h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#rental-applications .container-fluid .rental-applications-header nav ol.breadcrumb, #rental-applications .container-sm .rental-applications-header nav ol.breadcrumb, #rental-applications .container-md .rental-applications-header nav ol.breadcrumb, #rental-applications .container-lg .rental-applications-header nav ol.breadcrumb, #rental-applications .container-xl .rental-applications-header nav ol.breadcrumb, #rental-applications .container-xxl .rental-applications-header nav ol.breadcrumb {
+  padding-top: 0.625rem;
+  border-top: 1px solid #e0e4ef;
+  font-size: 0.75rem;
+  display: flex;
+  background: transparent;
+  list-style: none;
+  margin-bottom: 0;
+}
+#rental-applications .container-fluid .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #rental-applications .container-sm .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #rental-applications .container-md .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #rental-applications .container-lg .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #rental-applications .container-xl .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link, #rental-applications .container-xxl .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link {
+  text-decoration: none;
+  color: #479f76;
+  font-size: 0.75rem;
+}
+#rental-applications .container-fluid .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #rental-applications .container-sm .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #rental-applications .container-md .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #rental-applications .container-lg .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #rental-applications .container-xl .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover, #rental-applications .container-xxl .rental-applications-header nav ol.breadcrumb li.breadcrumb-item a.breadcrumb-link:hover {
+  color: #75b798;
+}
+#rental-applications .container-fluid table.table td a, #rental-applications .container-sm table.table td a, #rental-applications .container-md table.table td a, #rental-applications .container-lg table.table td a, #rental-applications .container-xl table.table td a, #rental-applications .container-xxl table.table td a {
+  color: #479f76;
+}
+#rental-applications .container-fluid table.table td a i.far:hover, #rental-applications .container-sm table.table td a i.far:hover, #rental-applications .container-md table.table td a i.far:hover, #rental-applications .container-lg table.table td a i.far:hover, #rental-applications .container-xl table.table td a i.far:hover, #rental-applications .container-xxl table.table td a i.far:hover, #rental-applications .container-fluid table.table td a i.fas:hover, #rental-applications .container-sm table.table td a i.fas:hover, #rental-applications .container-md table.table td a i.fas:hover, #rental-applications .container-lg table.table td a i.fas:hover, #rental-applications .container-xl table.table td a i.fas:hover, #rental-applications .container-xxl table.table td a i.fas:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  #rental-applications {
+    padding: 40px 40px 60px;
   }
 }
 #header-nav nav.navbar {
