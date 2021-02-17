@@ -24,195 +24,28 @@
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
+            @foreach ($properties as $property)
+                <div class="col property">
+                    <div class="card h-100 hoverable">
+                        <a href='/properties/{{ $property->property_name }}'>
+                            <div class='bg-image hover-zoom'>
+                                <img
+                                    src={{ $property->image_url }}
+                                    class="card-img-top"
+                                />
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{ $property->property_name }}
+                            </h5>
+                            <p class="card-text">
+                                {{ $property->property_description }}
+                            </p>
                         </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col property">
-                <div class="card h-100 hoverable">
-                    <a href='/properties/SLUG'>
-                        <div class='bg-image hover-zoom'>
-                            <img
-                                src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Property Name
-                        </h5>
-                        <p class="card-text">
-                            Property description
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

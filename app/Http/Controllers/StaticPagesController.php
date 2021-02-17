@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Property;
 
 class StaticPagesController extends Controller
 {
@@ -15,7 +16,10 @@ class StaticPagesController extends Controller
     }
 
     public function properties() {
-        return view('properties/all-properties');
+        $properties = Property::all();
+        return view('properties/all-properties', [
+            'properties' => $properties
+        ]);
     }
     
     public function singleProperty($propName) {
