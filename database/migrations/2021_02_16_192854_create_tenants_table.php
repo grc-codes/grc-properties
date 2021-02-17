@@ -15,14 +15,18 @@ class CreateTenantsTable extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedbigInteger('unit_id')->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
             $table->string('phone_number');
             $table->bigInteger('monthly_salary');
-            $table->unsignedbigInteger('unit_id')->nullable();
 
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('set null');
+        });
+
+        Schema::table('units', function(Blueprint $table) {
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
         });
     }
 

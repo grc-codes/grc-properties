@@ -40,13 +40,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach(range(0,20) as $idx)
+                                    @foreach($applications as $application)
                                         <tr>
-                                            <th scope='row' class='text-center'>John Doe</th>
-                                            <td class='text-center'>jdoe@gmail.com</td>
-                                            <td class='text-center'>917-123-4567</td>
-                                            <td class='text-center'>$50,0000</td>
-                                            <td class='text-center'>BK 101</td>
+                                            <th scope='row' class='text-center'>{{$application->first_name.' '.$application->last_name}}</th>
+                                            <td class='text-center'>{{ $application->email }}</td>
+                                            <td class='text-center'>{{ $application->phone_number }}</td>
+                                            <td class='text-center'>${{ $application->monthly_salary }}</td>
+                                            <td class='text-center'>{{ $application->preferred_unit}}</td>
                                             <td class='text-center'>
                                                 <a href='/manager/tenants/create'>
                                                     <i class='fas fa-user-plus'></i>

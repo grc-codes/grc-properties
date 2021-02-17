@@ -32,7 +32,6 @@
                                 <thead class='table-dark'>
                                     <tr>
                                         <th scope='col' class='text-center'>Property Name</th>
-                                        <th scope='col' class='text-center'>Location</th>
                                         <th scope='col' class='text-center'>Image URL</th>
                                         <th scope='col' class='text-center'>Floors</th>
                                         <th scope='col' class='text-center'>Units Per Floor</th>
@@ -42,23 +41,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach(range(0,20) as $idx)
+                                    @foreach($properties as $property)
                                         <tr>
-                                            <th scope='row' class='text-center'>Property Name</th>
-                                            <td class='text-center'>Denver CO</td>
-                                            <td class='text-center'>/img/building.png</td>
-                                            <td class='text-center'>2</td>
-                                            <td class='text-center'>20</td>
+                                            <th scope='row' class='text-center'>{{ $property->property_name }}</th>
+                                            <td class='text-center'>{{ $property->image_url}}</td>
+                                            <td class='text-center'>{{ $property->floors}}</td>
+                                            <td class='text-center'>{{ $property->units_per_floor }}</td>
                                             <td class='text-center'>
                                                 3 units available
                                             </td>
                                             <td class='text-center'>
-                                                <a href='/manager/properties/1/edit'>
+                                                <a href='/manager/properties/{{ $property->id }}/edit'>
                                                     <i class='fas fa-edit'></i>
                                                 </a>
                                             </td>
                                             <td class='text-center'>
-                                                <a href='/manager/properties/1/delete'>
+                                                <a href='/manager/properties/{{ $property->id}}/delete'>
                                                     <i class='fas fa-trash-alt'></i>
                                                 </a>
                                             </td>

@@ -38,13 +38,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach(range(0,20) as $idx)
+                                    @foreach($messages as $message)
                                         <tr>
-                                            <th scope='row' class='text-center'>John Doe</th>
-                                            <td class='text-center'>jdoe@gmail.com</td>
-                                            <td class='text-center'>917-123-4567</td>
+                                            <th scope='row' class='text-center'>{{ $message->name }}</th>
+                                            <td class='text-center'>{{ $message->email }}</td>
+                                            <td class='text-center'>{{ $message->phone_number }}</td>
                                             <td class='text-center'>
-                                                <a href='/manager/messages/1'>
+                                                <a href='/manager/messages/{{ $message->id }}'>
                                                     <i class='fas fa-envelope'></i>
                                                 </a>
                                             </td>

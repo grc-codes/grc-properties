@@ -151,8 +151,8 @@
                                     <option value='manhattan'>Manhattan</option>
                                     <option value='bronx'>Bronx</option>
                                     <option value='queens'>Queens</option>
-                                    <option value='Long Island'>Long Island</option>
-                                    <option value='Brooklyn'>Brooklyn</option>
+                                    <option value='long_island'>Long Island</option>
+                                    <option value='brooklyn'>Brooklyn</option>
                                 </select>
                             </div>
                         </div>

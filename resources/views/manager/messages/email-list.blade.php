@@ -37,12 +37,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach(range(0,20) as $idx)
+                                    @foreach($subscriptions as $subscription)
                                         <tr>
-                                            <th scope='row' class='text-center'>John Doe</th>
-                                            <td class='text-center'>jdoe@gmail.com</td>
+                                            <th scope='row' class='text-center'>{{ $subscription->name }}</th>
+                                            <td class='text-center'>{{ $subscription->email }}</td>
                                             <td class='text-center'>
-                                                <a href='/manager/email-list/1/delete'>
+                                                <a href='/manager/email-list/{{ $subscription->id }}/delete'>
                                                     <i class='fas fa-trash-alt'></i>
                                                 </a>
                                             </td>

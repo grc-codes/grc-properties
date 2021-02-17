@@ -15,15 +15,14 @@ class CreateUnitsTable extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedbigInteger('property_id')->nullable();
+            $table->unsignedbigInteger('tenant_id')->nullable();
             $table->bigInteger('beds');
             $table->bigInteger('baths');
             $table->bigInteger('rent_price');
             $table->string('unit_prefix');
-            $table->bigInteger('property_id')->unsigned()->nullable();
-            $table->bigInteger('tenant_id')->unsigned()->nullable();
 
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('set null');
-            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('set null');
         });
     }
 

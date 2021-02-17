@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Subscription;
+use App\Models\Message;
+use App\Models\Application;
 
 class ManagerController extends Controller
 {
@@ -23,22 +26,37 @@ class ManagerController extends Controller
     }
 
     public function emailList() {
-        return view('/manager/messages/email-list');
+        $subscriptions = Subscription::all();
+        return view('/manager/messages/email-list', [
+            'subscriptions' => $subscriptions
+        ]);
     }
 
     public function siteMessages() {
-        return view('/manager/messages/messages');
+        $messages = Message::all();
+        return view('/manager/messages/messages', [
+            'messages' => $messages
+        ]);
     }
 
-    public function siteMessage() {
-        return view('/manager/messages/message');
+    public function siteMessage($id) {
+        $message = Message::where('id', '=', $id)->first();
+        return view('/manager/messages/message', [
+            'message' => $message 
+        ]);
     }
 
     public function rentalApps() {
-        return view('/manager/messages/rental-applications');
+        $applications = Application::all();
+        return view('/manager/messages/rental-applications', [
+            'applications' => $applications
+        ]);
     }
 
-    public function rentalApp() {
-        return view('/manager/messages/rental-application');
+    public function rentalApp($id) {
+        $application = Application::where('id', '=', $id)->first();
+        return view('/manager/messages/rental-application', [
+            'application' => $application
+        ]);
     }
 }
