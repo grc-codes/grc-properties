@@ -40,19 +40,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach(range(0,20) as $idx)
+                                    @foreach($tenants as $tenant)
                                         <tr>
-                                            <th scope='row'>John Doe</th>
-                                            <td>jdoe@gmail.com</td>
-                                            <td>917-342-2203</td>
-                                            <td>BK-100</td>
+                                            <th scope='row'>{{ $tenant->first_name . ' ' . $tenant->last_name }}</th>
+                                            <td>{{ $tenant->email }}</td>
+                                            <td>{{ $tenant->phone_number }}</td>
+                                            <td>{{ $tenant->apartment_num }}</td>
                                             <td class='text-center'>
-                                                <a href='/manager/tenants/1/edit'>
+                                                <a href='/manager/tenants/{{ $tenant->id }}/edit'>
                                                     <i class='fas fa-edit'></i>
                                                 </a>
                                             </td>
                                             <td class='text-center'>
-                                                <a href='/manager/tenants/1/delete'>
+                                                <a href='/manager/tenants/{{ $tenant->id }}/delete'>
                                                     <i class='fas fa-trash-alt'></i>
                                                 </a>
                                             </td>

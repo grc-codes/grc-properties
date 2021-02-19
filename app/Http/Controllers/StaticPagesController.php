@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Property;
+use App\Models\Unit;
 
 class StaticPagesController extends Controller
 {
@@ -22,9 +23,12 @@ class StaticPagesController extends Controller
         ]);
     }
     
-    public function singleProperty($propName) {
+    public function singleProperty($slug) {
+        $property = Property::where('property_name', '=', $slug)->first();
+        $units = Unit::where('property_id', '=', $property->id)->get();
         return view('properties/single-property', [
-            'propName' => ucfirst($propName)
+            'property' => $property,
+            'units' => $units
         ]);
     }
 

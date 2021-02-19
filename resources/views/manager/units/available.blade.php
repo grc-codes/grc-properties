@@ -35,22 +35,20 @@
                                         <th scope='col' class='text-center'>Bed</th>
                                         <th scope='col' class='text-center'>Bath</th>
                                         <th scope='col' class='text-center'>Price</th>
-                                        <th scope='col' class='text-center'>Available</th>
+                                        <th scope='col' class='text-center'>Claim</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($units as $unit)
+                                    @foreach($available_units as $available_unit)
                                         <tr>
-                                            <th scope='row' class='text-center'>{{ $unit->unit_prefix . '-' . $unit->id}}</th>
-                                            <td class='text-center'>{{ $unit->beds }}</td>
-                                            <td class='text-center'>{{ $unit->baths }}</td>
-                                            <td class='text-center'>${{ number_format($unit->rent_price) }}</td>
+                                            <th scope='row' class='text-center'>{{ $available_unit->unit_prefix . '-' . $available_unit->id }}</th>
+                                            <td class='text-center'>{{ $available_unit->beds }}</td>
+                                            <td class='text-center'>{{ $available_unit->baths }}</td>
+                                            <td class='text-center'>${{ $available_unit->rent_price }}</td>
                                             <td class='text-center'>
-                                                @if($unit->tenant_id == null)
-                                                    Yes
-                                                @else
-                                                    No
-                                                @endif
+                                                <a href='/manager/units/1/claim'>
+                                                    <i class='fas fa-edit'></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

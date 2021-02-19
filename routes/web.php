@@ -29,7 +29,7 @@ Route::get('/contact', [StaticPagesController::class, 'contact']);
 
 // Properties Pages
 Route::get('/properties', [StaticPagesController::class, 'properties']);
-Route::get('/properties/{propName}', [StaticPagesController::class, 'singleProperty']);
+Route::get('/properties/{slug}', [StaticPagesController::class, 'singleProperty']);
 
 // Manager Pages
 Route::get('/manager', [ManagerController::class, 'dashboard']);

@@ -26,7 +26,7 @@ class CreateTenantsTable extends Migration
         });
 
         Schema::table('units', function(Blueprint $table) {
-            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('set null');
         });
     }
 

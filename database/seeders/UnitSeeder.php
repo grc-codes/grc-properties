@@ -23,9 +23,9 @@ class UnitSeeder extends Seeder
             foreach(range(1, $units_building) as $idx) {
                 DB::table('units')->insert([
                     'property_id' => $property->id,
-                    'beds' => 1,
-                    'baths' => 1,
-                    'rent_price' => 2000,
+                    'beds' => rand(0,4),
+                    'baths' => rand(1,2),
+                    'rent_price' => rand(1000,1600),
                     'unit_prefix' => $property->property_abbreviation
                 ]);
             }

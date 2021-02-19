@@ -17,24 +17,36 @@ class TenantSeeder extends Seeder
      *
      * @return void
      */
+
+    public function loader($unitId,$tenantId) {
+        $faker = Faker::create();
+        DB::table('tenants')->insert([
+            'first_name' => $faker->firstName,
+            'last_name' => $faker->lastName,
+            'email' => $faker->email,
+            'phone_number' => $faker->phoneNumber,
+            'monthly_salary' => rand(2500,6000),
+            'unit_id' =>  $unitId
+        ]);
+        DB::table('units')->updateOrInsert(
+            ['id' => $unitId],
+            ['tenant_id' => $tenantId]
+        );
+    }
+
     public function run()
     {
-        $faker = Faker::create();
-        
         foreach(range(1,20) as $idx){
-            $available_unit = Unit::whereNull('tenant_id')->first();
-            DB::table('tenants')->insert([
-                'first_name' => $faker->firstName,
-                'last_name' => $faker->lastName,
-                'email' => $faker->email,
-                'phone_number' => $faker->phoneNumber,
-                'monthly_salary' => rand(2500,6000),
-                'unit_id' =>  $available_unit->id
-            ]);
-            DB::table('units')->updateOrInsert(
-                ['id' => $available_unit->id],
-                ['tenant_id' => $idx]
-            );
+            $total_units = Unit::all()->count();
+            $rand_num = rand(1,$total_units);
+            $selected_unit = Unit::find($rand_num);
+            if($selected_unit->tenant_id == null) {
+                $this->loader($rand_num,$idx);
+            } else {
+                $rand_num = rand(1,$total_units);
+                $selected_unit = Unit::find($rand_num);
+                $this->loader($rand_num,$idx);
+            }
         }
     }
 }

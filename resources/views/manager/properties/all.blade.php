@@ -48,7 +48,7 @@
                                             <td class='text-center'>{{ $property->floors}}</td>
                                             <td class='text-center'>{{ $property->units_per_floor }}</td>
                                             <td class='text-center'>
-                                                3 units available
+                                                {{ $property->available_units }} units available
                                             </td>
                                             <td class='text-center'>
                                                 <a href='/manager/properties/{{ $property->id }}/edit'>
