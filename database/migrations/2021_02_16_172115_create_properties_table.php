@@ -21,6 +21,7 @@ class CreatePropertiesTable extends Migration
             $table->text('image_url');
             $table->bigInteger('floors');
             $table->bigInteger('units_per_floor');
+            $table->timestamps();
         });
     }
 

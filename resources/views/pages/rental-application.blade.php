@@ -51,15 +51,9 @@
                         <label for='selectUnit' class='col-sm-4 col-form-label'>Preferred Unit</label>
                         <div class='col-sm-8'>
                             <select aria-label='Unit Selection' class='form-select' name='selectUnit' id='selectUnit'>
-                                <option selected value='bk101'>BK 101</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
-                                <option value='bk102'>BK 102</option>
+                                @foreach($available_units as $unit)
+                                <option value='{{ $unit->unit_prefix . '-' . $unit->id }}'>{{ $unit->unit_prefix . '-' . $unit->id }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

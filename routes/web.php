@@ -41,13 +41,12 @@ Route::get('/manager/messages/{id}', [ManagerController::class, 'siteMessage']);
 Route::get('/manager/rental-applications', [ManagerController::class, 'rentalApps']);
 Route::get('/manager/rental-applications/{id}', [ManagerController::class, 'rentalApp']);
 
-
-
-
 // Manager Property Pages
 Route::get('/manager/properties', [PropertyController::class, 'index']);
 Route::get('/manager/properties/create', [PropertyController::class, 'create']);
-Route::get('/manager/properties/{slug}/edit', [PropertyController::class, 'edit']);
+Route::post('/manager/properties', [PropertyController::class, 'store']);
+Route::get('/manager/properties/{id}/edit', [PropertyController::class, 'edit']);
+Route::put('/manager/properties/{id}', [PropertyController::class, 'update']);
 
 // Manager Units Pages
 Route::get('/manager/units', [UnitController::class, 'index']);

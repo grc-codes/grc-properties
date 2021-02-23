@@ -71,11 +71,9 @@
                                 </label>
                                 <div class='col-sm-8'>
                                     <select name='unit' id='unit' class='form-select'>
-                                        <option selected value='bk101'>BK 101</option>
-                                        <option value='bk102'>BK 102</option>
-                                        <option value='bk103'>BK 103</option>
-                                        <option value='bk104'>BK 104</option>
-                                        <option value='bk105'>BK 105</option>
+                                        @foreach($available_units as $unit)
+                                            <option value='{{ $unit->unit_prefix . '-' . $unit->id }}'>{{ $unit->unit_prefix . '-' . $unit->id }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

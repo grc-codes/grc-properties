@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $properties->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

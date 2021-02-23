@@ -21,7 +21,10 @@ class TenantController extends Controller {
     }
 
     public function create() {
-        return view('manager/tenants/create');
+        $available_units = Unit::where('tenant_id', '=', null)->get();
+        return view('manager/tenants/create', [
+            'available_units' => $available_units
+        ]);
     }
 
     public function edit($slug) {

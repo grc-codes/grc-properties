@@ -33,7 +33,10 @@ class StaticPagesController extends Controller
     }
 
     public function rentalApplication() {
-        return view('pages/rental-application');
+        $available_units = Unit::where('tenant_id', '=', null)->get();
+        return view('pages/rental-application', [
+            'available_units' => $available_units
+        ]);
     }
 
     public function contact() {
