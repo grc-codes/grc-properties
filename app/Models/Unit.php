@@ -10,16 +10,14 @@ class Unit extends Model
     protected $table = 'units';
 
     protected $fillable = [
-        'property_id',
         'beds',
         'baths',
         'rent_price',
-        'unit_prefix',
-        'tenant_id'
+        'apartment_num'
     ];
 
-    public function properties() {
-        return $this->belongsTo('App\Model\Property');
+    public function floors() {
+        return $this->belongsTo('App\Model\Floor');
     }
 
     public function tenants() {

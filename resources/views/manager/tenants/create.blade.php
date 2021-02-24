@@ -72,7 +72,7 @@
                                 <div class='col-sm-8'>
                                     <select name='unit' id='unit' class='form-select'>
                                         @foreach($available_units as $unit)
-                                            <option value='{{ $unit->unit_prefix . '-' . $unit->id }}'>{{ $unit->unit_prefix . '-' . $unit->id }}</option>
+                                            <option value='{{ $unit->apartment_num . '-' . $unit->id }}'>{{ $unit->apartment_num . '-' . $unit->id }}</option>
                                         @endforeach
                                     </select>
                                 </div>

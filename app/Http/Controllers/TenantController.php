@@ -11,9 +11,9 @@ class TenantController extends Controller {
     public function index() {
         $tenants = Tenant::all();
         foreach($tenants as $tenant) {
-            $unit_num = $tenant->unit_id;
-            $unit_prefix = Unit::find($unit_num)->unit_prefix;
-            $tenant->apartment_num = $unit_prefix . '-' . $unit_num;
+            $apartment_num = $tenant->unit_id;
+            $apartment_num = Unit::find($apartment_num)->apartment_num;
+            $tenant->apartment_num = $apartment_num . '-' . $apartment_num;
         }
         return view('manager/tenants/all', [
             'tenants' => $tenants

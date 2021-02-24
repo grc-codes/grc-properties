@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUnitsTable extends Migration
+class CreateFloorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,14 @@ class CreateUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('floors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedbigInteger('property_id')->nullable();
-            $table->unsignedbigInteger('tenant_id')->nullable();
-            $table->unsignedbigInteger('floor_id')->nullable();
-            $table->bigInteger('beds');
-            $table->bigInteger('baths');
-            $table->bigInteger('rent_price');
-            $table->string('apartment_num');
+            $table->bigInteger('floor_num');
+            $table->bigInteger('num_of_units');
+            $table->string('prefix');
 
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
-            $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
         });
     }
 
@@ -35,6 +31,6 @@ class CreateUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('floors');
     }
 }

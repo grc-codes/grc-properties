@@ -10,14 +10,14 @@ class Property extends Model
     protected $table = 'properties';
 
     protected $fillable = [
-        'property_name',
-        'property_abbreviation',
+        'name',
+        'property_prefix',
         'image_url',
         'floors',
         'units_per_floor'
     ];
 
-    public function units() {
-        return $this->hasMany('App\Model\Unit', 'property_id');
+    public function floors() {
+        return $this->hasMany('App\Model\Floor', 'property_id');
     }
 }

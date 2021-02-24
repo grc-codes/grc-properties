@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(PropertySeeder::class);
+        $this->call(FloorSeeder::class);
         $this->call(UnitSeeder::class);
         $this->call(TenantSeeder::class);
         $this->call(SubscriptionSeeder::class);

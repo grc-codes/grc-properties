@@ -43,7 +43,7 @@
                                 <tbody>
                                     @foreach($properties as $property)
                                         <tr>
-                                            <th scope='row' class='text-center'>{{ $property->property_name }}</th>
+                                            <th scope='row' class='text-center'>{{ $property->name }}</th>
                                             <td class='text-center'>{{ $property->image_url}}</td>
                                             <td class='text-center'>{{ $property->floors}}</td>
                                             <td class='text-center'>{{ $property->units_per_floor }}</td>

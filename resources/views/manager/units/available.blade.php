@@ -41,7 +41,7 @@
                                 <tbody>
                                     @foreach($available_units as $available_unit)
                                         <tr>
-                                            <th scope='row' class='text-center'>{{ $available_unit->unit_prefix . '-' . $available_unit->id }}</th>
+                                            <th scope='row' class='text-center'>{{ $available_unit->apartment_num . '-' . $available_unit->id }}</th>
                                             <td class='text-center'>{{ $available_unit->beds }}</td>
                                             <td class='text-center'>{{ $available_unit->baths }}</td>
                                             <td class='text-center'>${{ $available_unit->rent_price }}</td>

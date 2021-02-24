@@ -35,12 +35,12 @@
                         </div>
                         <div class='card-body'>
                             <div class='row mb-3'>
-                                <label for='property_name' class='col-sm-4 col-form-label'>
+                                <label for='name' class='col-sm-4 col-form-label'>
                                     Property Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Manhattan' name='property_name' type='text' id='property_name' class='form-control @error('property_name') is-invalid @enderror'>
-                                    @error('property_name')
+                                    <input placeholder='Manhattan' name='name' type='text' id='name' class='form-control @error('name') is-invalid @enderror'>
+                                    @error('name')
                                         <span class='invalid-feedback' role='alert'>
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -48,12 +48,12 @@
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='property_abbreviation' class='col-sm-4 col-form-label'>
+                                <label for='property_prefix' class='col-sm-4 col-form-label'>
                                     Property Abbreviation
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='MAN' name='property_abbreviation' type='text' id='property_abbreviation' class='form-control @error('property_abbreviation') is-invalid @enderror'>
-                                    @error('property_abbreviation')
+                                    <input placeholder='MAN' name='property_prefix' type='text' id='property_prefix' class='form-control @error('property_prefix') is-invalid @enderror'>
+                                    @error('property_prefix')
                                         <span class='invalid-feedback' role='alert'>
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -78,18 +78,13 @@
                                     Floors
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='floors' id='floors' class='form-select @error('floors') is-invalid @enderror'>
+                                    <select name='floors' id='floors' class='form-select'>
                                         <option selected value='1'>1</option>
                                         <option value='2'>2</option>
                                         <option value='3'>3</option>
                                         <option value='4'>4</option>
                                         <option value='5'>5</option>
                                     </select>
-                                    @error('floors')
-                                        <span class='invalid-feedback' role='alert'>
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
@@ -97,27 +92,22 @@
                                     Units Per Floor
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='units_per_floor' id='units_per_floor' class='form-select @error('units_per_floor') is-invalid @enderror'>
+                                    <select name='units_per_floor' id='units_per_floor' class='form-select'>
                                         <option selected value='10'>10</option>
                                         <option value='20'>20</option>
                                         <option value='30'>30</option>
                                         <option value='40'>40</option>
                                         <option value='50'>50</option>
                                     </select>
-                                    @error('units_per_floor')
-                                        <span class='invalid-feedback' role='alert'>
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-5'>
-                                <label for='property_description' class='col-sm-4 col-form-label'>
+                                <label for='description' class='col-sm-4 col-form-label'>
                                     Property Description
                                 </label>
                                 <div class='col-sm-8'>
-                                    <textarea name='property_description' class='form-control @error('property_name') is-invalid @enderror' placeholder='Lorem ...' id='property_description'></textarea>
-                                    @error('property_description')
+                                    <textarea name='description' class='form-control @error('description') is-invalid @enderror' placeholder='Lorem ...' id='description'></textarea>
+                                    @error('description')
                                         <span class='invalid-feedback' role='alert'>
                                             <strong>{{ $message }}</strong>
                                         </span>

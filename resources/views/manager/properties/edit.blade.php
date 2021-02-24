@@ -25,7 +25,7 @@
         </div>
         <div class='row'>
             <div id='form-container' class='col-12'>
-                <form action='/manager/properties/{{ $property->id }}' class='container-fluid' method='POST'>
+                <form method='POST' action='/manager/properties/{{ $property->id }}' class='container-fluid'>
                     @csrf
                     @method('PUT')
                     <div class='card'>
@@ -36,12 +36,12 @@
                         </div>
                         <div class='card-body'>
                             <div class='row mb-3'>
-                                <label for='property_name' class='col-sm-4 col-form-label'>
+                                <label for='name' class='col-sm-4 col-form-label'>
                                     Property Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input value='{{ old('property_name', $property->property_name) }}' placeholder='Manhattan' name='property_name' type='text' id='property_name' class='form-control @error('property_name') is-invalid @enderror'>
-                                    @error('property_name')
+                                    <input value='{{ old('name', $property->name) }}' placeholder='Manhattan' name='name' type='text' id='name' class='form-control @error('name') is-invalid @enderror'>
+                                    @error('name')
                                         <span class='invalid-feedback' role='alert'>
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -49,11 +49,16 @@
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='property_abbreviation' class='col-sm-4 col-form-label'>
+                                <label for='property_prefix' class='col-sm-4 col-form-label'>
                                     Property Abbreviation
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input value='{{ old('property_abbreviation', $property->property_abbreviation) }}' placeholder='MAN' name='property_abbreviation' type='text' id='property_abbreviation' class='form-control @error('property_abbreviation') is-invalid @enderror'>
+                                    <input value='{{ old('property_prefix', $property->property_prefix) }}' placeholder='MAN' name='property_prefix' type='text' id='property_prefix' class='form-control @error('property_prefix') is-invalid @enderror'>
+                                    @error('property_prefix')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
@@ -62,6 +67,11 @@
                                 </label>
                                 <div class='col-sm-8'>
                                     <input value='{{ old('image_url', $property->image_url) }}' placeholder='/img/building.png' name='image_url' type='text' id='image_url' class='form-control @error('image_url') is-invalid @enderror'>
+                                    @error('image_url')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
@@ -69,33 +79,38 @@
                                     Floors
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='floors' id='floors' class='form-select @error('floors') is-invalid @enderror'>
+                                    <select name='floors' id='floors' class='form-select'>
                                         <option value='1' @if($property->floors == '1')selected @endif>1</option>
                                         <option value='2' @if($property->floors == '2')selected @endif>2</option>
                                         <option value='3' @if($property->floors == '3')selected @endif>3</option>
                                         <option value='4' @if($property->floors == '4')selected @endif>4</option>
                                         <option value='5' @if($property->floors == '5')selected @endif>5</option>
                                     </select>
-                                    @error('floors')
-                                        <span class='invalid-feedback' role='alert'>
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
                             </div>
-                            <div class='row mb-5'>
+                            <div class='row mb-3'>
                                 <label for='units_per_floor' class='col-sm-4 col-form-label'>
                                     Units Per Floor
                                 </label>
                                 <div class='col-sm-8'>
-                                    <select name='units_per_floor' id='units_per_floor' class='form-select @error('units_per_floor') is-invalid @enderror'>
+                                    <select name='units_per_floor' id='units_per_floor' class='form-select'>
                                         <option value='10' @if($property->units_per_floor == '10')selected @endif>10</option>
                                         <option value='20' @if($property->units_per_floor == '20')selected @endif>20</option>
                                         <option value='30' @if($property->units_per_floor == '30')selected @endif>30</option>
                                         <option value='40' @if($property->units_per_floor == '40')selected @endif>40</option>
                                         <option value='50' @if($property->units_per_floor == '50')selected @endif>50</option>
                                     </select>
-                                    @error('units_per_floor')
+                                </div>
+                            </div>
+                            <div class='row mb-5'>
+                                <label for='description' class='col-sm-4 col-form-label'>
+                                    Property Description
+                                </label>
+                                <div class='col-sm-8'>
+                                    <textarea name='description' class='form-control @error('description') is-invalid @enderror' placeholder='Lorem ...' id='description'>
+                                        {{ old('description', $property->description) }}
+                                    </textarea>
+                                    @error('description')
                                         <span class='invalid-feedback' role='alert'>
                                             <strong>{{ $message }}</strong>
                                         </span>

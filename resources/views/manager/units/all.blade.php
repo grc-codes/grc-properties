@@ -41,7 +41,7 @@
                                 <tbody>
                                     @foreach($units as $unit)
                                         <tr>
-                                            <th scope='row' class='text-center'>{{ $unit->unit_prefix . '-' . $unit->id}}</th>
+                                            <th scope='row' class='text-center'>{{ $unit->apartment_num }}</th>
                                             <td class='text-center'>{{ $unit->beds }}</td>
                                             <td class='text-center'>{{ $unit->baths }}</td>
                                             <td class='text-center'>${{ number_format($unit->rent_price) }}</td>

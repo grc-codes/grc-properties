@@ -24,7 +24,7 @@ class StaticPagesController extends Controller
     }
     
     public function singleProperty($slug) {
-        $property = Property::where('property_name', '=', $slug)->first();
+        $property = Property::where('name', '=', $slug)->first();
         $units = Unit::where('property_id', '=', $property->id)->get();
         return view('properties/single-property', [
             'property' => $property,

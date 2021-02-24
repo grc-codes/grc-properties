@@ -13,7 +13,7 @@
                     <nav aria-label='breadcrumb'>
                         <ol class='breadcrumb'>
                             <li class='breadcrumb-item'><a class='breadcrumb-link' href='/properties'>Home</a></li>
-                            <li class='breadcrumb-item active' aria-current='page'>{{ $property->property_name }}</li>
+                            <li class='breadcrumb-item active' aria-current='page'>{{ $property->name }}</li>
                         </ol>
                     </nav>
                 </div>
@@ -23,7 +23,7 @@
             <div class='col-12'>
                 <div class='card'>
                     <h5 class='card-header'>
-                        {{ $property->property_name }}
+                        {{ $property->name }}
                     </h5>
                     <div class='card-body'>
                         <div class='table-responsive'>
