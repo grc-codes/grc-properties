@@ -17,6 +17,19 @@ class PropertySeeder extends Seeder
      */
     public function run()
     {
+        foreach(range(1,20) as $idx) {
+            DB::table('properties')->insert([
+                'name' => 'Manhattan',
+                'property_prefix' => 'MAN',
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur at suscipit! Accusantium voluptatum, aperiam illo consequatur, aliquam perspiciatis adipisci modi labore cumque eos exercitationem, recusandae similique. Velit, exercitationem doloremque?',
+                'image_url' => '/img/properties/manhattan.jpg',
+                'floors' => rand(1,4),
+                'units_per_floor' => 20,
+                'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now()
+            ]);
+        }
+        
         DB::table('properties')->insert([
             'name' => 'Manhattan',
             'property_prefix' => 'MAN',

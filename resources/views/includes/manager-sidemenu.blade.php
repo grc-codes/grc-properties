@@ -66,9 +66,6 @@
                                             <li class='nav-item'>
                                                 <a href='/manager/units' class='nav-link'>All Units</a>
                                             </li>
-                                            <li class='nav-item'>
-                                                <a href='/manager/units/available' class='nav-link'>Available Units</a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </li>

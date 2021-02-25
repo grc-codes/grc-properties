@@ -50,7 +50,6 @@ Route::put('/manager/properties/{id}', [PropertyController::class, 'update']);
 
 // Manager Units Pages
 Route::get('/manager/units', [UnitController::class, 'index']);
-Route::get('/manager/units/available', [UnitController::class, 'available']);
 
 // Manager Tenants Pages
 Route::get('/manager/tenants', [TenantController::class, 'index']);

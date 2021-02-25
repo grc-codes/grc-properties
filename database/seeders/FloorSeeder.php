@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Str;
+use Carbon\Carbon;
 use App\Models\Property;
 
 
@@ -26,7 +28,9 @@ class FloorSeeder extends Seeder
                     'property_id' => $property->id,
                     'floor_num' => $idx,
                     'num_of_units' => $units,
-                    'prefix' => $property->property_prefix
+                    'prefix' => $property->property_prefix,
+                    'updated_at' => Carbon::now(),
+                    'created_at' => Carbon::now()
                 ]);
             }
         }

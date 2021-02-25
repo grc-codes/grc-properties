@@ -29,7 +29,9 @@ class ApplicationSeeder extends Seeder
                 'email' => $faker->email,
                 'phone_number' => $faker->phoneNumber,
                 'monthly_salary' => rand(3000,6000),
-                'preferred_unit' => $available_units->id
+                'preferred_unit' => $available_units->id,
+                'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now()
             ]);
         }
     }

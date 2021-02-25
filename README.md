@@ -7,11 +7,8 @@ GRC Properties will be a full-stack property management app with the following f
 - About Us Page
 - Contact Us Page
 - Properties Page
-- Tenant Login Portal
-  - Tenant Lease Agreement Dashboard
-  - Payment Log
-  - Message Form Between Tentant and Manager
 - Building Manager Portal
   - Properties Stat Dashboard
-  - Tenant Log
   - Building Log
+  - Unit Log
+  - Tenant Log

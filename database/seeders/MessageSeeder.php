@@ -88,6 +88,8 @@ class MessageSeeder extends Seeder
                 'building' => $building_options[rand(0, count($building_options) - 1)],
                 'tour' => $tour_options[rand(0, count($tour_options) - 1)],
                 'comments' => $faker->text($maxNbChars = 200),
+                'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now()
             ]);
         }
     }

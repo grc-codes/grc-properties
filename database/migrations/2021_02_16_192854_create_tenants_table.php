@@ -21,6 +21,7 @@ class CreateTenantsTable extends Migration
             $table->string('email');
             $table->string('phone_number');
             $table->bigInteger('monthly_salary');
+            $table->timestamps();
 
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('set null');
         });

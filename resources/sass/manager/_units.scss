@@ -48,6 +48,25 @@
                 }
             }
         }
+        .card-footer {
+            display: flex;
+            nav {
+                ul.pagination {
+                    li.page-item {
+                        &.active {
+                            span.page-link {
+                                color: #fff;
+                                background: $green-400;
+                                border-color: $green-400;
+                            }
+                        }
+                        a.page-link {
+                            color: $green-400;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -69,6 +69,7 @@ class PropertyController extends Controller {
                     'beds' => rand(0,4),
                     'baths' => rand(1,2),
                     'rent_price' => rand(1000,1600),
+                    'unit_num' => $unitidx,
                     'apartment_num' => $property->property_prefix . '-' . $flooridx . '-' . $unitidx
                 ]);
             }
@@ -106,7 +107,7 @@ class PropertyController extends Controller {
         $property->units_per_floor = request('units_per_floor');
         $property->save();
 
-        // Update Floors & Units
+        // Update Floors
         $new_floor_count = $property->floors;
         $new_unit_count = $property->units_per_floor;
         if($curr_floor_count < $new_floor_count) {
@@ -120,34 +121,35 @@ class PropertyController extends Controller {
                 ]);
             }
         } elseif($curr_floor_count > $new_floor_count) {
+            // Deleting Floors
             $floors_to_delete = Floor::where('property_id', $id)->where('floor_num', '>', $new_floor_count)->delete();
         }
 
+        // Adding Units
+        $floors = Floor::where('property_id', '=', $property->id)->get();
+        foreach($floors as $floor) {
+            $floor->num_of_units = $property->units_per_floor;
+            $floor->save();
+            $curr_units_in_floor_count = Unit::where('floor_id', '=', $floor->id)->count();
+            if($curr_units_in_floor_count < $new_unit_count) {
+                // Adding Units
+                foreach(range($curr_units_in_floor_count + 1, $new_unit_count) as $unitidx) {
+                    DB::table('units')->insert([
+                        'property_id' => $property->id,
+                        'floor_id' => $floor->id,
+                        'beds' => rand(0,4),
+                        'baths' => rand(1,2),
+                        'rent_price' => rand(1000,1600),
+                        'unit_num' => $unitidx,
+                        'apartment_num' => $property->property_prefix . '-' . $floor->floor_num . '-' . $unitidx
+                    ]);
+                }
+            } elseif($curr_units_in_floor_count > $new_unit_count) {
+                // Removing Units
+                $units_to_delete = Unit::where('floor_id', $floor->id)->where('unit_num', '>', $new_unit_count)->delete();
+            }
+        }
 
-        // $new_unit_total = $property->floors * $property->units_per_floor;
-        // $old_unit_total = Unit::where('property_id', $id)->count();
-
-        // if($new_unit_total > $old_unit_total) {
-        //     $units_to_make = $new_unit_total - $old_unit_total;
-        //     foreach(range(1, $units_to_make) as $idx) {
-        //         DB::table('units')->insert([
-        //             'property_id' => $property->id,
-        //             'beds' => rand(0,4),
-        //             'baths' => rand(1,2),
-        //             'rent_price' => rand(1000,1600),
-        //             'apartment_num' => $property->property_prefix
-        //         ]);
-        //     }
-        // } elseif($new_unit_total < $old_unit_total) {
-        //     $units_to_delete = $old_unit_total - $new_unit_total;
-        //     $units_last_id = Unit::where('property_id', $id)->last()->id;
-        //     $all_unit_count = Unit::all()->count();
-        //     foreach(range(1, $units_to_delete) as $idx) {
-        //         $unit = Unit::find($all_unit_count);
-        //         $flight->delete();
-        //         $all_unit_count = $all_unit_count - 1;
-        //     }
-        // }
-
+        return redirect('manager/properties');
     }
 }

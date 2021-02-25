@@ -47,9 +47,13 @@
                                             <td class='text-center'>${{ number_format($unit->rent_price) }}</td>
                                             <td class='text-center'>
                                                 @if($unit->tenant_id == null)
+                                                <span class='available'>
                                                     Yes
+                                                </span>
                                                 @else
+                                                <span class='notAvailable'>
                                                     No
+                                                </span>
                                                 @endif
                                             </td>
                                         </tr>
@@ -59,7 +63,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $units->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

@@ -11260,6 +11260,17 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 #all-properties .container-fluid table.table td a i.far:hover, #all-properties .container-sm table.table td a i.far:hover, #all-properties .container-md table.table td a i.far:hover, #all-properties .container-lg table.table td a i.far:hover, #all-properties .container-xl table.table td a i.far:hover, #all-properties .container-xxl table.table td a i.far:hover {
   cursor: pointer;
 }
+#all-properties .container-fluid .card-footer, #all-properties .container-sm .card-footer, #all-properties .container-md .card-footer, #all-properties .container-lg .card-footer, #all-properties .container-xl .card-footer, #all-properties .container-xxl .card-footer {
+  display: flex;
+}
+#all-properties .container-fluid .card-footer nav ul.pagination li.page-item.active span.page-link, #all-properties .container-sm .card-footer nav ul.pagination li.page-item.active span.page-link, #all-properties .container-md .card-footer nav ul.pagination li.page-item.active span.page-link, #all-properties .container-lg .card-footer nav ul.pagination li.page-item.active span.page-link, #all-properties .container-xl .card-footer nav ul.pagination li.page-item.active span.page-link, #all-properties .container-xxl .card-footer nav ul.pagination li.page-item.active span.page-link {
+  color: #fff;
+  background: #479f76;
+  border-color: #479f76;
+}
+#all-properties .container-fluid .card-footer nav ul.pagination li.page-item a.page-link, #all-properties .container-sm .card-footer nav ul.pagination li.page-item a.page-link, #all-properties .container-md .card-footer nav ul.pagination li.page-item a.page-link, #all-properties .container-lg .card-footer nav ul.pagination li.page-item a.page-link, #all-properties .container-xl .card-footer nav ul.pagination li.page-item a.page-link, #all-properties .container-xxl .card-footer nav ul.pagination li.page-item a.page-link {
+  color: #479f76;
+}
 
 @media screen and (min-width: 992px) {
   #all-properties {
@@ -11311,6 +11322,17 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 #all-units .container-fluid table.table td a i.far:hover, #all-units .container-sm table.table td a i.far:hover, #all-units .container-md table.table td a i.far:hover, #all-units .container-lg table.table td a i.far:hover, #all-units .container-xl table.table td a i.far:hover, #all-units .container-xxl table.table td a i.far:hover {
   cursor: pointer;
 }
+#all-units .container-fluid .card-footer, #all-units .container-sm .card-footer, #all-units .container-md .card-footer, #all-units .container-lg .card-footer, #all-units .container-xl .card-footer, #all-units .container-xxl .card-footer {
+  display: flex;
+}
+#all-units .container-fluid .card-footer nav ul.pagination li.page-item.active span.page-link, #all-units .container-sm .card-footer nav ul.pagination li.page-item.active span.page-link, #all-units .container-md .card-footer nav ul.pagination li.page-item.active span.page-link, #all-units .container-lg .card-footer nav ul.pagination li.page-item.active span.page-link, #all-units .container-xl .card-footer nav ul.pagination li.page-item.active span.page-link, #all-units .container-xxl .card-footer nav ul.pagination li.page-item.active span.page-link {
+  color: #fff;
+  background: #479f76;
+  border-color: #479f76;
+}
+#all-units .container-fluid .card-footer nav ul.pagination li.page-item a.page-link, #all-units .container-sm .card-footer nav ul.pagination li.page-item a.page-link, #all-units .container-md .card-footer nav ul.pagination li.page-item a.page-link, #all-units .container-lg .card-footer nav ul.pagination li.page-item a.page-link, #all-units .container-xl .card-footer nav ul.pagination li.page-item a.page-link, #all-units .container-xxl .card-footer nav ul.pagination li.page-item a.page-link {
+  color: #479f76;
+}
 
 @media screen and (min-width: 992px) {
   #all-units {
@@ -11361,6 +11383,17 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 }
 #all-tenants .container-fluid table.table td a i.far:hover, #all-tenants .container-sm table.table td a i.far:hover, #all-tenants .container-md table.table td a i.far:hover, #all-tenants .container-lg table.table td a i.far:hover, #all-tenants .container-xl table.table td a i.far:hover, #all-tenants .container-xxl table.table td a i.far:hover {
   cursor: pointer;
+}
+#all-tenants .container-fluid .card-footer, #all-tenants .container-sm .card-footer, #all-tenants .container-md .card-footer, #all-tenants .container-lg .card-footer, #all-tenants .container-xl .card-footer, #all-tenants .container-xxl .card-footer {
+  display: flex;
+}
+#all-tenants .container-fluid .card-footer nav ul.pagination li.page-item.active span.page-link, #all-tenants .container-sm .card-footer nav ul.pagination li.page-item.active span.page-link, #all-tenants .container-md .card-footer nav ul.pagination li.page-item.active span.page-link, #all-tenants .container-lg .card-footer nav ul.pagination li.page-item.active span.page-link, #all-tenants .container-xl .card-footer nav ul.pagination li.page-item.active span.page-link, #all-tenants .container-xxl .card-footer nav ul.pagination li.page-item.active span.page-link {
+  color: #fff;
+  background: #479f76;
+  border-color: #479f76;
+}
+#all-tenants .container-fluid .card-footer nav ul.pagination li.page-item a.page-link, #all-tenants .container-sm .card-footer nav ul.pagination li.page-item a.page-link, #all-tenants .container-md .card-footer nav ul.pagination li.page-item a.page-link, #all-tenants .container-lg .card-footer nav ul.pagination li.page-item a.page-link, #all-tenants .container-xl .card-footer nav ul.pagination li.page-item a.page-link, #all-tenants .container-xxl .card-footer nav ul.pagination li.page-item a.page-link {
+  color: #479f76;
 }
 
 @media screen and (min-width: 992px) {

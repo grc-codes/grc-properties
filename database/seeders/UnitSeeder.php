@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Str;
+use Carbon\Carbon;
 use App\Models\Floor;
 
 
@@ -26,7 +28,10 @@ class UnitSeeder extends Seeder
                     'beds' => rand(0,4),
                     'baths' => rand(1,2),
                     'rent_price' => rand(1000,1600),
-                    'apartment_num' => $floor->prefix . '-' . $floor->floor_num . '-' . $idx
+                    'unit_num' => $idx,
+                    'apartment_num' => $floor->prefix . '-' . $floor->floor_num . '-' . $idx,
+                    'updated_at' => Carbon::now(),
+                    'created_at' => Carbon::now()
                 ]);
             }
         }

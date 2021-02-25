@@ -26,7 +26,9 @@ class TenantSeeder extends Seeder
             'email' => $faker->email,
             'phone_number' => $faker->phoneNumber,
             'monthly_salary' => rand(2500,6000),
-            'unit_id' =>  $unitId
+            'unit_id' =>  $unitId,
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
         ]);
         DB::table('units')->updateOrInsert(
             ['id' => $unitId],

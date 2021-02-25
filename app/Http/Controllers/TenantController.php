@@ -9,7 +9,7 @@ use App\Models\Unit;
 
 class TenantController extends Controller {
     public function index() {
-        $tenants = Tenant::all();
+        $tenants = Tenant::paginate(10);
         foreach($tenants as $tenant) {
             $apartment_num = $tenant->unit_id;
             $apartment_num = Unit::find($apartment_num)->apartment_num;

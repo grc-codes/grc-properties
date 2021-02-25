@@ -19,6 +19,7 @@ class CreateFloorsTable extends Migration
             $table->bigInteger('floor_num');
             $table->bigInteger('num_of_units');
             $table->string('prefix');
+            $table->timestamps();
 
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
         });

@@ -22,6 +22,8 @@ class CreateUnitsTable extends Migration
             $table->bigInteger('baths');
             $table->bigInteger('rent_price');
             $table->string('apartment_num');
+            $table->bigInteger('unit_num');
+            $table->timestamps();
 
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');

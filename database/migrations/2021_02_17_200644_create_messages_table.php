@@ -26,6 +26,7 @@ class CreateMessagesTable extends Migration
             $table->string('building');
             $table->string('tour');
             $table->text('comments');
+            $table->timestamps();
         });
     }
 

@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $tenants->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

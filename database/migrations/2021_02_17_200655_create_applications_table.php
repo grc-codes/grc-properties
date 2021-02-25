@@ -21,6 +21,7 @@ class CreateApplicationsTable extends Migration
             $table->string('phone_number');
             $table->bigInteger('monthly_salary');
             $table->string('preferred_unit');
+            $table->timestamps();
         });
     }
 

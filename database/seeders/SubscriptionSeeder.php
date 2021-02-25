@@ -24,7 +24,9 @@ class SubscriptionSeeder extends Seeder
         foreach(range(1,50) as $idx){
             DB::table('subscriptions')->insert([
                 'name' => $faker->firstName . ' ' . $faker->lastName,
-                'email' => $faker->email
+                'email' => $faker->email,
+                'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now()
             ]);
         }
     }
