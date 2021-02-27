@@ -32,6 +32,12 @@ class ManagerController extends Controller
         ]);
     }
 
+    public function deleteSubscription($id) {
+        $subscription = Subscription::find($id);
+        $subscription->delete();
+        return redirect('/manager/email-list');
+    }
+
     public function siteMessages() {
         $messages = Message::all();
         return view('/manager/messages/messages', [

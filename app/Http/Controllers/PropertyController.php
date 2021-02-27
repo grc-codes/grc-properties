@@ -152,4 +152,10 @@ class PropertyController extends Controller {
 
         return redirect('manager/properties');
     }
+
+    public function delete($id) {
+        $property = Property::find($id);
+        $property->delete();
+        return redirect('/manager/properties');
+    }
 }

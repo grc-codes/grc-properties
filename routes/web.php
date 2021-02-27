@@ -22,6 +22,8 @@ use App\Http\Controllers\TenantController;
 
 // Static Pages
 Route::get('/', [StaticPagesController::class, 'home']);
+Route::post('/', [StaticPagesController::class, 'storeSubscriber']);
+Route::get('/thank-you', [StaticPagesController::class, 'subThankYou']);
 Route::get('/about', [StaticPagesController::class, 'about']);
 Route::get('/rental-application', [StaticPagesController::class, 'rentalApplication']);
 Route::get('/contact', [StaticPagesController::class, 'contact']);
@@ -35,7 +37,7 @@ Route::get('/properties/{slug}', [StaticPagesController::class, 'singleProperty'
 Route::get('/manager', [ManagerController::class, 'dashboard']);
 Route::get('/manager/register', [ManagerController::class, 'register']);
 Route::get('/manager/login', [ManagerController::class, 'login']);
-Route::get('/manager/email-list', [ManagerController::class, 'emailList']);
+Route::get('/manager/email-list', [SubscriptionController::class, 'index']);
 Route::get('/manager/messages', [ManagerController::class, 'siteMessages']);
 Route::get('/manager/messages/{id}', [ManagerController::class, 'siteMessage']);
 Route::get('/manager/rental-applications', [ManagerController::class, 'rentalApps']);
@@ -47,6 +49,7 @@ Route::get('/manager/properties/create', [PropertyController::class, 'create']);
 Route::post('/manager/properties', [PropertyController::class, 'store']);
 Route::get('/manager/properties/{id}/edit', [PropertyController::class, 'edit']);
 Route::put('/manager/properties/{id}', [PropertyController::class, 'update']);
+Route::get('/manager/properties/{id}/delete', [PropertyController::class, 'delete']);
 
 // Manager Units Pages
 Route::get('/manager/units', [UnitController::class, 'index']);
@@ -54,7 +57,10 @@ Route::get('/manager/units', [UnitController::class, 'index']);
 // Manager Tenants Pages
 Route::get('/manager/tenants', [TenantController::class, 'index']);
 Route::get('/manager/tenants/create', [TenantController::class, 'create']);
-Route::get('/manager/tenants/{slug}/edit', [TenantController::class, 'edit']);
+Route::post('/manager/tenants', [TenantController::class, 'store']);
+Route::get('/manager/tenants/{id}/edit', [TenantController::class, 'edit']);
+Route::put('/manager/tenants/{id}', [TenantController::class, 'update']);
+Route::get('/manager/tenants/{id}/delete', [TenantController::class, 'delete']);
 
 
 Auth::routes();

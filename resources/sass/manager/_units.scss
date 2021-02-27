@@ -47,6 +47,14 @@
                     }
                 }
             }
+            td.available {
+                background: green;
+                color: #fff;
+            }
+            td.not-available {
+                color: #fff;
+                background: red;
+            }
         }
         .card-footer {
             display: flex;

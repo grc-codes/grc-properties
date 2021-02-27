@@ -25,7 +25,9 @@
         </div>
         <div class='row'>
             <div id='form-container' class='col-12'>
-                <form action='/manager/tenants' class='container-fluid'>
+                <form method='POST' action='/manager/tenants/{{ $tenant->id }}' class='container-fluid'>
+                    @csrf
+                    @method('PUT')
                     <div class='card'>
                         <div class='card-header'>
                             <h3 class='mb-1 text-center'>
@@ -34,19 +36,29 @@
                         </div>
                         <div class='card-body'>
                             <div class='row mb-3'>
-                                <label for='firstName' class='col-sm-4 col-form-label'>
+                                <label for='first_name' class='col-sm-4 col-form-label'>
                                     First Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Joe' name='firstName' type='text' id='firstName' class='form-control'>
+                                    <input value='{{ old('first_name', $tenant->first_name) }}' placeholder='Joe' name='first_name' type='text' id='first_name' class='form-control @error('first_name') is-invalid @enderror'>
+                                    @error('first_name')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='lastName' class='col-sm-4 col-form-label'>
+                                <label for='last_name' class='col-sm-4 col-form-label'>
                                     Last Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Doe' name='lastName' type='text' id='lastName' class='form-control'>
+                                    <input value='{{ old('last_name', $tenant->last_name) }}' placeholder='Doe' name='last_name' type='text' id='last_name' class='form-control @error('last_name') is-invalid @enderror'>
+                                    @error('last_name')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
@@ -54,15 +66,38 @@
                                     Email
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='jdoe@gmail.com' name='email' type='email' id='email' class='form-control'>
+                                    <input value='{{ old('email', $tenant->email) }}' placeholder='jdoe@gmail.com' name='email' type='email' id='email' class='form-control @error('email') is-invalid @enderror'>
+                                    @error('email')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='phone' class='col-sm-4 col-form-label'>
+                                <label for='phone_number' class='col-sm-4 col-form-label'>
                                     Phone
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='917-123-4566' name='phone' type='tel' id='phone' class='form-control'>
+                                    <input value='{{ old('phone_number', $tenant->phone_number) }}' placeholder='917-123-4566' name='phone_number' type='tel' id='phone_number' class='form-control @error('phone_number') is-invalid @enderror'>
+                                    @error('phone_number')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class='row mb-3'>
+                                <label for='monthly_salary' class='col-sm-4 col-form-label'>
+                                    Monthly Salary ($)
+                                </label>
+                                <div class='col-sm-8'>
+                                    <input value='{{ old('monthly_salary', $tenant->monthly_salary) }}' placeholder='5000' name='monthly_salary' type='text' id='monthly_salary' class='form-control @error('monthly_salary') is-invalid @enderror'>
+                                    @error('monthly_salary')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-5'>
@@ -71,11 +106,10 @@
                                 </label>
                                 <div class='col-sm-8'>
                                     <select name='unit' id='unit' class='form-select'>
-                                        <option selected value='bk101'>BK 101</option>
-                                        <option value='bk102'>BK 102</option>
-                                        <option value='bk103'>BK 103</option>
-                                        <option value='bk104'>BK 104</option>
-                                        <option value='bk105'>BK 105</option>
+                                        <option value='{{$tenant->apartment_num}}'>{{ $tenant->apartment_num }}</option>
+                                        @foreach($available_units as $unit)
+                                            <option value='{{ $unit->apartment_num }}'>{{ $unit->apartment_num }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

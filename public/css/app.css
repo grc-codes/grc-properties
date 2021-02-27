@@ -11322,6 +11322,14 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 #all-units .container-fluid table.table td a i.far:hover, #all-units .container-sm table.table td a i.far:hover, #all-units .container-md table.table td a i.far:hover, #all-units .container-lg table.table td a i.far:hover, #all-units .container-xl table.table td a i.far:hover, #all-units .container-xxl table.table td a i.far:hover {
   cursor: pointer;
 }
+#all-units .container-fluid table.table td.available, #all-units .container-sm table.table td.available, #all-units .container-md table.table td.available, #all-units .container-lg table.table td.available, #all-units .container-xl table.table td.available, #all-units .container-xxl table.table td.available {
+  background: green;
+  color: #fff;
+}
+#all-units .container-fluid table.table td.not-available, #all-units .container-sm table.table td.not-available, #all-units .container-md table.table td.not-available, #all-units .container-lg table.table td.not-available, #all-units .container-xl table.table td.not-available, #all-units .container-xxl table.table td.not-available {
+  color: #fff;
+  background: red;
+}
 #all-units .container-fluid .card-footer, #all-units .container-sm .card-footer, #all-units .container-md .card-footer, #all-units .container-lg .card-footer, #all-units .container-xl .card-footer, #all-units .container-xxl .card-footer {
   display: flex;
 }

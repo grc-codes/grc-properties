@@ -45,17 +45,15 @@
                                             <td class='text-center'>{{ $unit->beds }}</td>
                                             <td class='text-center'>{{ $unit->baths }}</td>
                                             <td class='text-center'>${{ number_format($unit->rent_price) }}</td>
-                                            <td class='text-center'>
-                                                @if($unit->tenant_id == null)
-                                                <span class='available'>
+                                            @if($unit->tenant_id == null)
+                                                <td class='text-center available'>
                                                     Yes
-                                                </span>
-                                                @else
-                                                <span class='notAvailable'>
+                                                </td>
+                                            @else
+                                                <td class='text-center not-available'>
                                                     No
-                                                </span>
-                                                @endif
-                                            </td>
+                                                </td>
+                                            @endif
                                         </tr>
                                     @endforeach
                                 </tbody>

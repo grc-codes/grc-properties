@@ -5,11 +5,31 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\Unit;
+use App\Models\Subscription;
 
 class StaticPagesController extends Controller
 {
     public function home() {
         return view('start');
+    }
+
+    public function subThankYou() {
+        return view('pages/sub-thank-you');
+    }
+
+    public function storeSubscriber() {
+        request()->validate([
+            'name' => ['required', 'string'],
+            'email' => ['required', 'string']
+        ]);
+
+        // New Subscription
+        $subscription = new Subscription;
+        $subscription->name = request('name');
+        $subscription->email = request('email');
+        $subscription->save();
+
+        return redict('/thank-you');
     }
 
     public function about() {

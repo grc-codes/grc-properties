@@ -25,7 +25,8 @@
         </div>
         <div class='row'>
             <div id='form-container' class='col-12'>
-                <form action='/manager/tenants' class='container-fluid'>
+                <form action='/manager/tenants' class='container-fluid' method='POST'>
+                    @csrf
                     <div class='card'>
                         <div class='card-header'>
                             <h3 class='mb-1 text-center'>
@@ -34,19 +35,29 @@
                         </div>
                         <div class='card-body'>
                             <div class='row mb-3'>
-                                <label for='firstName' class='col-sm-4 col-form-label'>
+                                <label for='first_name' class='col-sm-4 col-form-label'>
                                     First Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Joe' name='firstName' type='text' id='firstName' class='form-control'>
+                                    <input placeholder='Joe' name='first_name' type='text' id='first_name' class='form-control @error('first_name') is-invalid @enderror'>
+                                    @error('first_name')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='lastName' class='col-sm-4 col-form-label'>
+                                <label for='last_name' class='col-sm-4 col-form-label'>
                                     Last Name
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='Doe' name='lastName' type='text' id='lastName' class='form-control'>
+                                    <input placeholder='Doe' name='last_name' type='text' id='last_name' class='form-control @error('last_name') is-invalid @enderror'>
+                                    @error('last_name')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
@@ -54,15 +65,38 @@
                                     Email
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='jdoe@gmail.com' name='email' type='email' id='email' class='form-control'>
+                                    <input placeholder='jdoe@gmail.com' name='email' type='email' id='email' class='form-control @error('email') is-invalid @enderror'>
+                                    @error('email')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-3'>
-                                <label for='phone' class='col-sm-4 col-form-label'>
+                                <label for='phone_number' class='col-sm-4 col-form-label'>
                                     Phone
                                 </label>
                                 <div class='col-sm-8'>
-                                    <input placeholder='917-123-4566' name='phone' type='tel' id='phone' class='form-control'>
+                                    <input placeholder='917-123-4566' name='phone_number' type='tel' id='phone_number' class='form-control @error('phone_number') is-invalid @enderror'>
+                                    @error('phone_number')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class='row mb-3'>
+                                <label for='monthly_salary' class='col-sm-4 col-form-label'>
+                                    Monthly Salary ($)
+                                </label>
+                                <div class='col-sm-8'>
+                                    <input placeholder='5000' name='monthly_salary' type='text' id='monthly_salary' class='form-control @error('monthly_salary') is-invalid @enderror'>
+                                    @error('monthly_salary')
+                                        <span class='invalid-feedback' role='alert'>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class='row mb-5'>
@@ -72,7 +106,7 @@
                                 <div class='col-sm-8'>
                                     <select name='unit' id='unit' class='form-select'>
                                         @foreach($available_units as $unit)
-                                            <option value='{{ $unit->apartment_num . '-' . $unit->id }}'>{{ $unit->apartment_num . '-' . $unit->id }}</option>
+                                            <option value='{{ $unit->apartment_num }}'>{{ $unit->apartment_num }}</option>
                                         @endforeach
                                     </select>
                                 </div>

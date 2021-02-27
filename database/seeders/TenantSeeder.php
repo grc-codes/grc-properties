@@ -20,6 +20,7 @@ class TenantSeeder extends Seeder
 
     public function loader($unitId,$tenantId) {
         $faker = Faker::create();
+        $apartment_num = Unit::find($unitId)->apartment_num;
         DB::table('tenants')->insert([
             'first_name' => $faker->firstName,
             'last_name' => $faker->lastName,
@@ -27,6 +28,7 @@ class TenantSeeder extends Seeder
             'phone_number' => $faker->phoneNumber,
             'monthly_salary' => rand(2500,6000),
             'unit_id' =>  $unitId,
+            'apartment_num' => $apartment_num,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
