@@ -1,6 +1,10 @@
 #rental-app-page {
     padding: 30px;
     margin-bottom: 2rem;
+    h2.thank-you {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
 }
 
 @media screen and (min-width: 768px) {

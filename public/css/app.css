@@ -10877,6 +10877,9 @@ section#home-page .bottom-container .bottom-card input {
   section#home-page .bottom-container .row-cols-auto {
     flex-direction: unset;
   }
+  section#home-page .bottom-container#thank-you {
+    padding: 215px 30px;
+  }
 }
 footer {
   background: #404041;
@@ -11013,6 +11016,10 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
   padding: 30px;
   margin-bottom: 2rem;
 }
+#rental-app-page h2.thank-you, #rental-app-page .thank-you.h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
 
 @media screen and (min-width: 768px) {
   #rental-app-page {
@@ -11047,6 +11054,10 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 #contact-page .container-fluid .contact-form, #contact-page .container-sm .contact-form, #contact-page .container-md .contact-form, #contact-page .container-lg .contact-form, #contact-page .container-xl .contact-form, #contact-page .container-xxl .contact-form {
   background: #fff;
   padding: 20px;
+}
+#contact-page .container-fluid .contact-form h1.thank-you, #contact-page .container-sm .contact-form h1.thank-you, #contact-page .container-md .contact-form h1.thank-you, #contact-page .container-lg .contact-form h1.thank-you, #contact-page .container-xl .contact-form h1.thank-you, #contact-page .container-xxl .contact-form h1.thank-you, #contact-page .container-fluid .contact-form .thank-you.h1, #contact-page .container-sm .contact-form .thank-you.h1, #contact-page .container-md .contact-form .thank-you.h1, #contact-page .container-lg .contact-form .thank-you.h1, #contact-page .container-xl .contact-form .thank-you.h1, #contact-page .container-xxl .contact-form .thank-you.h1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
@@ -11449,6 +11460,17 @@ footer .footer-wrap ul.nav li.nav-item a.nav-link:hover {
 }
 #messages .container-fluid table.table td a i.far:hover, #messages .container-sm table.table td a i.far:hover, #messages .container-md table.table td a i.far:hover, #messages .container-lg table.table td a i.far:hover, #messages .container-xl table.table td a i.far:hover, #messages .container-xxl table.table td a i.far:hover {
   cursor: pointer;
+}
+#messages .container-fluid .card-footer, #messages .container-sm .card-footer, #messages .container-md .card-footer, #messages .container-lg .card-footer, #messages .container-xl .card-footer, #messages .container-xxl .card-footer {
+  display: flex;
+}
+#messages .container-fluid .card-footer nav ul.pagination li.page-item.active span.page-link, #messages .container-sm .card-footer nav ul.pagination li.page-item.active span.page-link, #messages .container-md .card-footer nav ul.pagination li.page-item.active span.page-link, #messages .container-lg .card-footer nav ul.pagination li.page-item.active span.page-link, #messages .container-xl .card-footer nav ul.pagination li.page-item.active span.page-link, #messages .container-xxl .card-footer nav ul.pagination li.page-item.active span.page-link {
+  color: #fff;
+  background: #479f76;
+  border-color: #479f76;
+}
+#messages .container-fluid .card-footer nav ul.pagination li.page-item a.page-link, #messages .container-sm .card-footer nav ul.pagination li.page-item a.page-link, #messages .container-md .card-footer nav ul.pagination li.page-item a.page-link, #messages .container-lg .card-footer nav ul.pagination li.page-item a.page-link, #messages .container-xl .card-footer nav ul.pagination li.page-item a.page-link, #messages .container-xxl .card-footer nav ul.pagination li.page-item a.page-link {
+  color: #479f76;
 }
 
 @media screen and (min-width: 992px) {

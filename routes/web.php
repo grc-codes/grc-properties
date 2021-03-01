@@ -26,7 +26,11 @@ Route::post('/', [StaticPagesController::class, 'storeSubscriber']);
 Route::get('/thank-you', [StaticPagesController::class, 'subThankYou']);
 Route::get('/about', [StaticPagesController::class, 'about']);
 Route::get('/rental-application', [StaticPagesController::class, 'rentalApplication']);
+Route::post('/rental-application', [StaticPagesController::class, 'storeRentalApp']);
+Route::get('/rental-application/thank-you', [StaticPagesController::class, 'rentalAppThankYou']);
 Route::get('/contact', [StaticPagesController::class, 'contact']);
+Route::post('/contact', [StaticPagesController::class, 'storeMessage']);
+Route::get('/contact/thank-you', [StaticPagesController::class, 'messageThankYou']);
 
 
 // Properties Pages
@@ -37,7 +41,8 @@ Route::get('/properties/{slug}', [StaticPagesController::class, 'singleProperty'
 Route::get('/manager', [ManagerController::class, 'dashboard']);
 Route::get('/manager/register', [ManagerController::class, 'register']);
 Route::get('/manager/login', [ManagerController::class, 'login']);
-Route::get('/manager/email-list', [SubscriptionController::class, 'index']);
+Route::get('/manager/email-list', [ManagerController::class, 'showSubscriptions']);
+Route::get('/manager/email-list/{id}/delete', [ManagerController::class, 'deleteSubscription']);
 Route::get('/manager/messages', [ManagerController::class, 'siteMessages']);
 Route::get('/manager/messages/{id}', [ManagerController::class, 'siteMessage']);
 Route::get('/manager/rental-applications', [ManagerController::class, 'rentalApps']);

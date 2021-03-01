@@ -89,78 +89,11 @@
             </div>
         </div>
     </div>
-    <div class='container-fluid bottom-container'>
-        <div class='row row-cols-auto mx-auto'>
-            <div class='bottom-card col-12 mx-auto my-0 col-lg-4'>
-                <div class='icon-box'>
-                    <i class='far fa-question-circle'></i>
-                </div>
-                <h3>
-                    Have questions?
-                </h3>
-                <p>
-                    Find out about our pet policy, how to qualify, our application process, and more ...
-                </p>
-                <a href='#' class='btn btn-outline-dark bg-gradient btn-lg'>
-                    View our FAQs
-                </a>
-            </div>
-            <div class='bottom-card col-12 mx-auto my-0 col-lg-4'>
-                <div class='icon-box'>
-                    <i class='far fa-building'></i>
-                </div>
-                <h3>
-                    Interested?
-                </h3>
-                <p>
-                    If you’re ready for a tour, or have questions not answered in our FAQ, fill out our guest card.
-                </p>
-                <a href='#' class='btn btn-outline-dark bg-gradient btn-lg'>
-                    Contact Us
-                </a>
-            </div>
-            <div class='bottom-card col-12 mx-auto my-0 col-lg-4'>
-                <div class='icon-box'>
-                    <i class='far fa-envelope'></i>
-                </div>
-                <h3>
-                    Stay in the loop
-                </h3>
-                <p>
-                    Receive updates on availability:
-                </p>
-                <form action='/' method='POST'>
-                    @csrf
-                    <div class='row mb-3 mx-auto'>
-                        <div class='col-12 px-0'>
-                            <input name='name' type='text' class='form-control @error('name') is-invalid @enderror' id='name' placeholder='Your Name'>
-                            @error('name')
-                                <span class='invalid-feedback' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class='row mb-5 mx-auto'>
-                        <div class='col-12 px-0'>
-                            <input name='email' type='text' class='form-control @error('email') is-invalid @enderror' id='email' placeholder='Your Email'>
-                            @error('email')
-                                <span class='invalid-feedback' role='alert'>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-12 px-0'>
-                            <button class='btn btn-outline-dark bg-gradient btn-lg' type='submit'>
-                                Sign Up
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class='container-fluid bottom-container' id='thank-you'>
+        <h2 class='thank-you-text'>
+            Thank you!<br />
+            You will now receive updates on new vacancies.
+        </h2>
     </div>
 </section>
 @endsection

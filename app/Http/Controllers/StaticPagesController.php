@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\Unit;
-use App\Models\Subscription;
+use App\Models\Message;
+use App\Models\Application;
 
 class StaticPagesController extends Controller
 {
@@ -23,13 +24,13 @@ class StaticPagesController extends Controller
             'email' => ['required', 'string']
         ]);
 
-        // New Subscription
-        $subscription = new Subscription;
-        $subscription->name = request('name');
-        $subscription->email = request('email');
-        $subscription->save();
+        // New message
+        $message = new message;
+        $message->name = request('name');
+        $message->email = request('email');
+        $message->save();
 
-        return redict('/thank-you');
+        return redirect('/thank-you#thank-you');
     }
 
     public function about() {
@@ -59,8 +60,72 @@ class StaticPagesController extends Controller
         ]);
     }
 
+    public function storeRentalApp() {
+        request()->validate([
+            'first_name' => ['required', 'string'],
+            'last_name' => ['required', 'string'],
+            'email' => ['required', 'string'],
+            'phone_number' => ['required', 'string'],
+            'monthly_salary' => ['required'],
+            'preferred_unit' => ['required']
+        ]);
+
+        // New Message
+        $application = new Application;
+        $application->first_name = request('first_name');
+        $application->last_name = request('last_name');
+        $application->email = request('email');
+        $application->phone_number = request('phone_number');
+        $application->monthly_salary = request('monthly_salary');
+        $application->preferred_unit = request('preferred_unit');
+        $application->save();
+
+        return redirect('/rental-application/thank-you');
+    }
+
+    public function rentalAppThankYou() {
+        return view('pages/application-thank-you');
+    }
+
     public function contact() {
         return view('pages/contact');
+    }
+
+    public function storeMessage() {
+        request()->validate([
+            'name' => ['required', 'string'],
+            'email' => ['required', 'string'],
+            'phone_number' => ['required', 'string'],
+            'how_did_you_hear' => ['required'],
+            'moving_date' => ['required'],
+            'budget' => ['required'],
+            'rooms' => ['required'],
+            'pets' => ['required'],
+            'building' => ['required'],
+            'tour' => ['required'],
+            'comments' => ['required', 'string']
+        ]);
+
+        // New Message
+        $message = new Message;
+        $message->name = request('name');
+        $message->email = request('email');
+        $message->phone_number = request('phone_number');
+        $message->how_did_you_hear = request('how_did_you_hear');
+        $message->moving_date = request('moving_date');
+        $message->budget = request('budget');
+        $message->rooms = request('rooms');
+        $message->pets = request('pets');
+        $message->building = request('building');
+        $message->tour = request('tour');
+        $message->comments = request('comments');
+        $message->save();
+
+        return redirect('/contact/thank-you');
+    }
+
+    public function messageThankYou() {
+        return view('pages/message-thank-you');
     }
 
     public function managerAccess() {

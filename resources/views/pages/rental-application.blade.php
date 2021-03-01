@@ -16,41 +16,67 @@
                 </p>
             </div>
             <div class='card-body'>
-                <form action=''> 
+                <form action='/rental-application' method='POST'>
+                    @csrf
                     <div class='row mb-3'>
-                        <label for='firstName' class='col-sm-4 col-form-label'>First Name</label>
+                        <label for='first_name' class='col-sm-4 col-form-label'>First Name</label>
                         <div class='col-sm-8'>
-                            <input type='text' class='form-control' id='firstName' name='firstName'>
+                            <input type='text' class='form-control @error('first_name') is-invalid @enderror' id='first_name' name='first_name'>
+                            @error('first_name')
+                                <span class='invalid-feedback' role='alert'>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class='row mb-3'>
-                        <label for='lastName' class='col-sm-4 col-form-label'>Last Name</label>
+                        <label for='last_name' class='col-sm-4 col-form-label'>Last Name</label>
                         <div class='col-sm-8'>
-                            <input type='text' class='form-control' id='lastName' name='lastName'>
+                            <input type='text' class='form-control @error('last_name') is-invalid @enderror' id='last_name' name='last_name'>
+                            @error('last_name')
+                                <span class='invalid-feedback' role='alert'>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class='row mb-3'>
                         <label for='email' class='col-sm-4 col-form-label'>Email</label>
                         <div class='col-sm-8'>
-                            <input type='email' class='form-control' id='email' name='email'>
+                            <input type='email' class='form-control @error('email') is-invalid @enderror' id='email' name='email'>
+                            @error('email')
+                                <span class='invalid-feedback' role='alert'>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class='row mb-3'>
-                        <label for='phoneNumber' class='col-sm-4 col-form-label'>Phone</label>
+                        <label for='phone_number' class='col-sm-4 col-form-label'>Phone</label>
                         <div class='col-sm-8'>
-                            <input type='tel' class='form-control' id='phoneNumber' name='phoneNumber'>
+                            <input type='tel' class='form-control @error('phone_number') is-invalid @enderror' id='phone_number' name='phone_number'>
+                            @error('phone_number')
+                                <span class='invalid-feedback' role='alert'>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class='row mb-3'>
-                        <label for='monthlySalary' class='col-sm-4 col-form-label'>Monthly Salary ($)</label>
+                        <label for='monthly_salary' class='col-sm-4 col-form-label'>Monthly Salary ($)</label>
                         <div class='col-sm-8'>
-                            <input type='text' class='form-control' id='monthlySalary' name='monthlySalary'>
+                            <input type='text' class='form-control @error('monthly_salary') is-invalid @enderror' id='monthly_salary' name='monthly_salary'>
+                            @error('monthly_salary')
+                                <span class='invalid-feedback' role='alert'>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class='row mb-5'>
-                        <label for='selectUnit' class='col-sm-4 col-form-label'>Preferred Unit</label>
+                        <label for='preferred_unit' class='col-sm-4 col-form-label'>Preferred Unit</label>
                         <div class='col-sm-8'>
-                            <select aria-label='Unit Selection' class='form-select' name='selectUnit' id='selectUnit'>
+                            <select aria-label='Unit Selection' class='form-select' name='preferred_unit' id='preferred_unit'>
                                 @foreach($available_units as $unit)
                                 <option value='{{ $unit->apartment_num . '-' . $unit->id }}'>{{ $unit->apartment_num . '-' . $unit->id }}</option>
                                 @endforeach

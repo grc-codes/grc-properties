@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $subscriptions->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

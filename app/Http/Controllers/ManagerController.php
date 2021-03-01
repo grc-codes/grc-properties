@@ -25,8 +25,8 @@ class ManagerController extends Controller
         return view('/manager/login');
     }
 
-    public function emailList() {
-        $subscriptions = Subscription::all();
+    public function showSubscriptions() {
+        $subscriptions = Subscription::paginate(5);
         return view('/manager/messages/email-list', [
             'subscriptions' => $subscriptions
         ]);
@@ -39,7 +39,7 @@ class ManagerController extends Controller
     }
 
     public function siteMessages() {
-        $messages = Message::all();
+        $messages = Message::paginate(10);
         return view('/manager/messages/messages', [
             'messages' => $messages
         ]);

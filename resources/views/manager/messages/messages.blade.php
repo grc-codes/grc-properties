@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $messages->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

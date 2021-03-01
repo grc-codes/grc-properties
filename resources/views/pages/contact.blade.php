@@ -57,29 +57,45 @@
             </div>
             <div class='contact-form col-12 col-lg-6 ms-auto mx-0'>
                 <div class='container-fluid px-0'>
-                    <form action=''>
+                    <form action='/contact' method='POST'>
+                        @csrf
                         <div class='row mb-2'>
                             <label for='name' class='col-12 col-form-label'>Name</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <input type='text' class='form-control' id='name' name='name'>
+                                <input type='text' class='form-control @error('name') is-invalid @enderror' id='name' name='name'>
+                                @error('name')
+                                    <span class='invalid-feedback' role='alert'>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class='row mb-2'>
                             <label for='email' class='col-12 col-form-label'>Email</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <input type='email' class='form-control' id='email' name='email'>
+                                <input type='email' class='form-control @error('email') is-invalid @enderror' id='email' name='email'>
+                                @error('email')
+                                    <span class='invalid-feedback' role='alert'>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='phoneNumber' class='col-12 col-form-label'>Phone Number</label>
+                            <label for='phone_number' class='col-12 col-form-label'>Phone Number</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <input type='tel' class='form-control' id='phoneNumber' name='phoneNumber'>
+                                <input type='tel' class='form-control @error('phone_number') is-invalid @enderror' id='phone_number' name='phone_number'>
+                                @error('phone_number')
+                                    <span class='invalid-feedback' role='alert'>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='reference-select' class='col-12 col-form-label'>How did you hear about us?</label>
+                            <label for='how_did_you_hear' class='col-12 col-form-label'>How did you hear about us?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='reference' id='reference-select' class='form-select'>
+                                <select name='how_did_you_hear' id='how_did_you_hear' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='drive-by'>Drive By: Leasing Banner / Sign</option>
                                     <option value='craigslist'>Craigslist</option>
@@ -95,9 +111,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='movedate-select' class='col-12 col-form-label'>When are you looking to move?</label>
+                            <label for='moving_date' class='col-12 col-form-label'>When are you looking to move?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='movedate' id='movedate-select' class='form-select'>
+                                <select name='moving_date' id='moving_date' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='lessthan2wks'>Within 2 weeks</option>
                                     <option value='2wksto4wks'>2-4 weeks</option>
@@ -108,9 +124,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='budget-select' class='col-12 col-form-label'>How much are you looking to spend?</label>
+                            <label for='budget' class='col-12 col-form-label'>How much are you looking to spend?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='budget' id='budget-select' class='form-select'>
+                                <select name='budget' id='budget' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='800to900'>$800-$900</option>
                                     <option value='900to1000'>$900-$1000</option>
@@ -121,9 +137,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='room-select' class='col-12 col-form-label'>What style of apartment?</label>
+                            <label for='rooms' class='col-12 col-form-label'>What style of apartment?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='room' id='room-select' class='form-select'>
+                                <select name='rooms' id='rooms' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='studio'>Studio</option>
                                     <option value='onebed'>1 bedroom</option>
@@ -133,9 +149,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='pet-select' class='col-12 col-form-label'>Do you have any pets?</label>
+                            <label for='pets' class='col-12 col-form-label'>Do you have any pets?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='pet' id='pet-select' class='form-select'>
+                                <select name='pets' id='pets' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='no'>No</option>
                                     <option value='yes'>Yes</option>
@@ -143,9 +159,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='building-select' class='col-12 col-form-label'>What Botique Apartments building are you interested in?</label>
+                            <label for='building' class='col-12 col-form-label'>What Botique Apartments building are you interested in?</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='building' id='building-select' class='form-select'>
+                                <select name='building' id='building' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='unsure'>I'm not sure</option>
                                     <option value='manhattan'>Manhattan</option>
@@ -157,9 +173,9 @@
                             </div>
                         </div>
                         <div class='row mb-2'>
-                            <label for='tour-select' class='col-12 col-form-label'>What kind of tour would you prefer? (Subject to availability)</label>
+                            <label for='tour' class='col-12 col-form-label'>What kind of tour would you prefer? (Subject to availability)</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <select name='tour' id='tour-select' class='form-select'>
+                                <select name='tour' id='tour' class='form-select'>
                                     <option value='' selected></option>
                                     <option value='virtual'>Virtual Tour</option>
                                     <option value='inperson'>In-person Tour</option>
@@ -169,7 +185,12 @@
                         <div class='row mb-4'>
                             <label for='comments' class='col-12 col-form-label'>Comments</label>
                             <div class='col-12 col-md-8 col-lg-12 col-xl-8'>
-                                <textarea class='form-control' placeholder='Leave a comment here' id='comments'></textarea>
+                                <textarea name='comments' class='form-control @error('comments') is-invalid @enderror' placeholder='Leave a comment here' id='comments'></textarea>
+                                @error('comments')
+                                    <span class='invalid-feedback' role='alert'>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class='row'>
