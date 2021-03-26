@@ -8,6 +8,10 @@ use App\Models\Tenant;
 use App\Models\Unit;
 
 class TenantController extends Controller {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     public function index() {
         $tenants = Tenant::paginate(10);
         return view('manager/tenants/all', [
@@ -40,6 +44,7 @@ class TenantController extends Controller {
         $tenant->phone_number = request('phone_number');
         $tenant->monthly_salary = request('monthly_salary');
         $tenant->unit_id = Unit::where('apartment_num',request('unit'))->get('id')->first()->id;
+        $tenant->apartment_num = request('unit');
         $tenant->save();
 
         // Add Tenant ID to Unit

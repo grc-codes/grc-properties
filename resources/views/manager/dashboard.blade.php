@@ -25,20 +25,12 @@
                 <div class='card border-3 border-top border-top-primary'>
                     <div class='card-body'>
                         <h5 class='text-muted'>
-                            Total Revenue
+                            Monthly Revenue
                         </h5>
                         <div class='metric-value d-inline-block'>
                             <h1 class='mb-1'>
-                                $2322
+                                ${{ $monthly_revenue }}
                             </h1>
-                        </div>
-                        <div class='metric-label d-inline-block float-right text-success font-weight-bold'>
-                            <span>
-                                <i class='fa fa-fw fa-arrow-up'></i>
-                            </span>
-                            <span>
-                                5.86%
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -47,20 +39,12 @@
                 <div class='card border-3 border-top border-top-primary'>
                     <div class='card-body'>
                         <h5 class='text-muted'>
-                            Total Revenue
+                            Occupancy Rate
                         </h5>
                         <div class='metric-value d-inline-block'>
                             <h1 class='mb-1'>
-                                $2322
+                                {{ number_format($occupancy_rate, 2) }}
                             </h1>
-                        </div>
-                        <div class='metric-label d-inline-block float-right text-success font-weight-bold'>
-                            <span>
-                                <i class='fa fa-fw fa-arrow-up'></i>
-                            </span>
-                            <span>
-                                5.86%
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -69,42 +53,12 @@
                 <div class='card border-3 border-top border-top-primary'>
                     <div class='card-body'>
                         <h5 class='text-muted'>
-                            Total Revenue
+                            Vacancy Rate
                         </h5>
                         <div class='metric-value d-inline-block'>
                             <h1 class='mb-1'>
-                                $2322
+                                {{ number_format($vacancy_rate, 2) }}
                             </h1>
-                        </div>
-                        <div class='metric-label d-inline-block float-right text-success font-weight-bold'>
-                            <span>
-                                <i class='fa fa-fw fa-arrow-up'></i>
-                            </span>
-                            <span>
-                                5.86%
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class='col-12 col-md-6 col-lg-3'>
-                <div class='card border-3 border-top border-top-primary'>
-                    <div class='card-body'>
-                        <h5 class='text-muted'>
-                            Total Revenue
-                        </h5>
-                        <div class='metric-value d-inline-block'>
-                            <h1 class='mb-1'>
-                                $2322
-                            </h1>
-                        </div>
-                        <div class='metric-label d-inline-block float-right text-success font-weight-bold'>
-                            <span>
-                                <i class='fa fa-fw fa-arrow-up'></i>
-                            </span>
-                            <span>
-                                5.86%
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -122,9 +76,8 @@
                     <div class='card-footer'>
                         <p class='display-7 font-weight-bold'>
                             <span class='text-primary d-inline-block'>
-                                Estimated Revenue (Last 30 Days): $2241
+                                Estimated Revenue (Last 30 Days): ${{ $monthly_revenue }}
                             </span>
-                            <span class='text-success float-right'>+9.45%</span>
                         </p>
                     </div>
                 </div>

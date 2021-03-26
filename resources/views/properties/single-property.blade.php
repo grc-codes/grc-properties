@@ -38,7 +38,7 @@
                                 <tbody>
                                     @foreach($units as $unit)
                                         <tr>
-                                            <th scope='row'>{{ $unit->id }}</th>
+                                            <th scope='row'>{{ $unit->apartment_num }}</th>
                                             <td>{{ $unit->beds }} / {{ $unit->baths }}</td>
                                             <td>${{ number_format($unit->rent_price) }}</td>
                                         </tr>
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $units->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

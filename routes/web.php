@@ -39,6 +39,8 @@ Route::get('/properties/{slug}', [StaticPagesController::class, 'singleProperty'
 
 // Manager Pages
 Route::get('/manager', [ManagerController::class, 'dashboard']);
+Route::get('/manager/estimated-total-revenue', [ManagerController::class, 'estimatedTotalRevenue']);
+Route::get('/manager/revenue-by-property', [ManagerController::class, 'revenueByProperty']);
 Route::get('/manager/register', [ManagerController::class, 'register']);
 Route::get('/manager/login', [ManagerController::class, 'login']);
 Route::get('/manager/email-list', [ManagerController::class, 'showSubscriptions']);
@@ -66,6 +68,6 @@ Route::post('/manager/tenants', [TenantController::class, 'store']);
 Route::get('/manager/tenants/{id}/edit', [TenantController::class, 'edit']);
 Route::put('/manager/tenants/{id}', [TenantController::class, 'update']);
 Route::get('/manager/tenants/{id}/delete', [TenantController::class, 'delete']);
-
+Route::get('/manager/tenants/{id}/create', [ManagerController::class, 'newTenant']);
 
 Auth::routes();

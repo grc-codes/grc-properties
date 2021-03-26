@@ -51,6 +51,31 @@
                     -webkit-box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
                     box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
                 }
+                .card-img-top {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 250px;
+                }
+            }
+        }
+
+        .card-footer {
+            display: flex;
+            nav {
+                ul.pagination {
+                    li.page-item {
+                        &.active {
+                            span.page-link {
+                                color: #fff;
+                                background: #212529;
+                                border-color: #212529;
+                            }
+                        }
+                        a.page-link {
+                            color: #212529;
+                        }
+                    }
+                }
             }
         }
     }

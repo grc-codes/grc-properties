@@ -48,7 +48,7 @@
                                             <td class='text-center'>${{ $application->monthly_salary }}</td>
                                             <td class='text-center'>{{ $application->preferred_unit}}</td>
                                             <td class='text-center'>
-                                                <a href='/manager/tenants/create'>
+                                                <a href='/manager/tenants/{{ $application->id }}/create'>
                                                     <i class='fas fa-user-plus'></i>
                                                 </a>
                                             </td>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class='card-footer'>
-                        Pagination
+                        {{ $applications->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

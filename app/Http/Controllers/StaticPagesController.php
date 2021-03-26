@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\Unit;
 use App\Models\Message;
+use App\Models\Subscription;
 use App\Models\Application;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class StaticPagesController extends Controller
 {
@@ -24,11 +28,11 @@ class StaticPagesController extends Controller
             'email' => ['required', 'string']
         ]);
 
-        // New message
-        $message = new message;
-        $message->name = request('name');
-        $message->email = request('email');
-        $message->save();
+        // New Subscriber
+        $subscriber = new Subscription;
+        $subscriber->name = request('name');
+        $subscriber->email = request('email');
+        $subscriber->save();
 
         return redirect('/thank-you#thank-you');
     }
@@ -46,10 +50,12 @@ class StaticPagesController extends Controller
     
     public function singleProperty($slug) {
         $property = Property::where('name', '=', $slug)->first();
-        $units = Unit::where('property_id', '=', $property->id)->get();
+        $units = Unit::where('property_id', '=', $property->id);
+        $available_units = $units->where('tenant_id', '=', null)->paginate(10);
+        
         return view('properties/single-property', [
             'property' => $property,
-            'units' => $units
+            'units' => $available_units
         ]);
     }
 
@@ -70,7 +76,7 @@ class StaticPagesController extends Controller
             'preferred_unit' => ['required']
         ]);
 
-        // New Message
+        // New Application
         $application = new Application;
         $application->first_name = request('first_name');
         $application->last_name = request('last_name');
@@ -79,6 +85,7 @@ class StaticPagesController extends Controller
         $application->monthly_salary = request('monthly_salary');
         $application->preferred_unit = request('preferred_unit');
         $application->save();
+
 
         return redirect('/rental-application/thank-you');
     }

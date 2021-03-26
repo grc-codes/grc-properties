@@ -5,88 +5,26 @@
 
 @section('content')
 <section class='container-fluid px-0 mx-0' id='home-page'>
-    <div class='row py-0 px-0 mx-0'>
-        <div class='row px-0 mx-0'>
-            <div class='col-12 col-lg-6 px-4 py-4 cta-container'>
-                <h3>Choose</h3>
-                <p>
-                    an original Boutique Apartment, managed by Portus, LLC, renovated with a unique theme, and many with eco-friendly features. Studio, 1-br and 2-br Denver apartments are available.
-                </p>
-                <h3>
-                    Live
-                </h3>
-                <p>
-                    in the heart of Denver; our buildings are close to everything a city dweller needs.
-                </p>
-                <h3>
-                    Be a part
-                </h3>
-                <p>
-                    of the Boutique Apartments™ community, run with respect for each resident.
-                </p>
-            </div>
-            <div class='col-12 col-lg-6 px-4 py-4 form-container'>
-                <h4 class='text-center mb-0'>What are you looking for</h4>
-                <form action='' class='mx-auto'>
-                    <div class='row'>
-                        <div class='col-6'>
-                            <div class='form-floating'>
-                                <select name='bedrooms' id='bedrooms-select' class='form-select'>
-                                    <option value='any'>Any</option>
-                                    <option value='0'>Studio</option>
-                                    <option value='1'>1</option>
-                                    <option value='2'>2</option>
-                                    <option value='3'>3</option>
-                                </select>
-                                <label for='bedrooms-select'>Bedrooms</label>
-                            </div>
-                        </div>
-                        <div class='col-6'>
-                            <div class='form-floating'>
-                                <select name='bathrooms' id='bathrooms-select' class='form-select'>
-                                    <option value='any'>Any</option>
-                                    <option value='1'>1</option>
-                                    <option value='1.5'>1.5</option>
-                                    <option value='2'>2</option>
-                                </select>
-                                <label for='bathrooms-select'>Bathrooms</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-12'>
-                            <div class='form-floating'>
-                                <select name='buildings' id='buildings-select' class='form-select'>
-                                    <option value='any'>Any</option>
-                                    <option value='knickerbocker'>Knickerbocker</option>
-                                    <option value='getty'>Getty</option>
-                                    <option value='crooks'>Crooks</option>
-                                </select>
-                                <label for='buildings-select'>Building</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6'>
-                            <div class='form-floating'>
-                                <input name='min-price' type='text' class='form-control' id='min-price-input'>
-                                <label for='min-price-input'>Min Price ($)</label>
-                            </div>
-                        </div>
-                        <div class='col-6'>
-                            <div class='form-floating'>
-                                <input name='max-price' type='text' class='form-control' id='max-price-input'>
-                                <label for='max-price-input'>Max Price ($)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col text-center'>
-                        <button class='btn btn-primary btn-lg mx-auto bg-gradient' type='submit'>
-                            Search
-                        </button>
-                    </div>
-                </form>
-            </div>
+    <div class='col-12 px-4 py-4 cta-container'>
+        <div class='text'>
+            <h3>Choose</h3>
+            <p>
+                an original Boutique Apartment, managed by Portus, LLC, renovated with a unique theme, and many with eco-friendly features. Studio, 1-br and 2-br Denver apartments are available.
+            </p>
+            <h3>
+                Live
+            </h3>
+            <p>
+                in the heart of Denver; our buildings are close to everything a city dweller needs.
+            </p>
+            <h3>
+                Be a part
+            </h3>
+            <p>
+                of the Boutique Apartments™ community, run with respect for each resident.
+            </p>
+        </div>
+        <div class='image'>
         </div>
     </div>
     <div class='container-fluid bottom-container'>
@@ -160,6 +98,55 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <div id='properties-grid-section' class='row mx-0'>
+        <h2>
+            <span>Featured</span><br> Apartments
+        </h2>
+        <div class='properties-grid'>
+            <a href='/properties/brooklyn' class='property-box-link' id='one'>
+                <div class='property-box'>
+                    <div class='property-name'>Brooklyn</div>
+                    <div class='property-unit'>Unit #: BRK-1-7</div>
+                    <div class='property-rooms'>3BR / 1BA</div>
+                </div>
+            </a>
+            <a href='/properties/manhattan' class='property-box-link' id='two'>
+                <div class='property-box'>
+                    <div class='property-name'>Manhattan</div>
+                    <div class='property-unit'>Unit #: MAN-2-20</div>
+                    <div class='property-rooms'>1BR / 1BA</div>
+                </div>
+            </a>
+            <a href='/properties/staten%20island' class='property-box-link' id='three'>
+                <div class='property-box'>
+                    <div class='property-name'>Staten Island</div>
+                    <div class='property-unit'>Unit #: STI-2-14</div>
+                    <div class='property-rooms'>4BR / 2BA</div>
+                </div>
+            </a>
+            <a href='/properties/queens' class='property-box-link' id='four'>
+                <div class='property-box'>
+                    <div class='property-name'>Queens</div>
+                    <div class='property-unit'>Unit #: QUE-1-8</div>
+                    <div class='property-rooms'>0BR / 1BA</div>
+                </div>
+            </a>
+            <a href='/properties/bronx' class='property-box-link' id='five'>
+                <div class='property-box'>
+                    <div class='property-name'>Bronx</div>
+                    <div class='property-unit'>Unit #: BRX-1-7</div>
+                    <div class='property-rooms'>0BR / 1BA</div>
+                </div>
+            </a>
+            <a href='/properties/manhattan' class='property-box-link' id='six'>
+                <div class='property-box'>
+                    <div class='property-name'>Manhattan</div>
+                    <div class='property-unit'>Unit #: MAN-4-6</div>
+                    <div class='property-rooms'>2BR / 2BA</div>
+                </div>
+            </a>
         </div>
     </div>
 </section>

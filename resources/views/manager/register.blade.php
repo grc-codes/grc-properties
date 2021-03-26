@@ -42,7 +42,7 @@
                         </button>
                     </form>
                     <a href='/manager/login'>
-                        Already Signed Up? <span>Log In</span>
+                        Already Signoatuhned Up? <span>Log In</span>
                     </a>
                 </div>
             </div>
