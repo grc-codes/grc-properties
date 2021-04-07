@@ -26,7 +26,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             @foreach ($properties as $property)
                 <div class="col property">
-                    <div class="card h-100 hoverable">
+                    <div class="card hoverable">
                         <a href='/properties/{{ $property->name }}'>
                             <div class='bg-image hover-zoom'>
                                 <img

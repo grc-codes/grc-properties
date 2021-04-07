@@ -10964,11 +10964,11 @@ section#home-page .bottom-container .bottom-card input {
   }
   section#home-page #properties-grid-section .properties-grid a.property-box-link {
     box-shadow: unset;
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease-in-out;
   }
   section#home-page #properties-grid-section .properties-grid a.property-box-link .property-box {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease-in-out 0.3s;
   }
   section#home-page #properties-grid-section .properties-grid a.property-box-link:hover {
     box-shadow: 0 0 0 313px rgba(35, 31, 32, 0.6) inset;
